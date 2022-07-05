@@ -30,3 +30,6 @@ xcuserdata
 
 # CocoaPods
 Pods/
+
+# API Key
+APIKey.swift
