@@ -109,7 +109,6 @@
 				48DCDB4BCEDCBE0DF3A655C3 /* Pods-RestaurantSearchTests.debug.xcconfig */,
 				75D8BB587EFD92EBBD591340 /* Pods-RestaurantSearchTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -659,7 +658,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Toshiki-Yanagimoto.RestaurantSearch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ToshikiYanagimoto.RestaurantSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -688,7 +687,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Toshiki-Yanagimoto.RestaurantSearch";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ToshikiYanagimoto.RestaurantSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
