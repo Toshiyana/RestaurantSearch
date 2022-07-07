@@ -19,6 +19,7 @@ disabled_rules:
 - trailing_whitespace
 - force_try
 - function_parameter_count # 引数を6個以上用いたいため
+- identifier_name
 
 # opt-inルールの中で無効にするルール
 - conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
@@ -89,15 +90,3 @@ function_body_length:
 type_name:
   min_length: 1
   max_length: 40
-
-identifier_name:
-  min_length: # only min_length
-    error: 2 # only error
-  excluded: # excluded via string array
-    - id
-    - URL
-    - x
-    - y
-    - vc
-    - on
-  reporter: "xcode"
