@@ -10,6 +10,7 @@ target 'RestaurantSearch' do
   pod 'RxCocoa', '6.5.0'
   pod 'Moya/RxSwift', '~> 15.0'
   pod 'Kingfisher', '~> 7.0'
+  pod 'PKHUD'
 
   target 'RestaurantSearchTests' do
     inherit! :search_paths
