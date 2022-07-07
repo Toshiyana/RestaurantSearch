@@ -6,7 +6,10 @@ target 'RestaurantSearch' do
   use_frameworks!
 
   # Pods for RestaurantSearch
+  pod 'RxSwift', '6.5.0'
+  pod 'RxCocoa', '6.5.0'
   pod 'Moya/RxSwift', '~> 15.0'
+  pod 'Kingfisher', '~> 7.0'
 
   target 'RestaurantSearchTests' do
     inherit! :search_paths
