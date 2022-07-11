@@ -22,6 +22,7 @@ disabled_rules:
 - identifier_name
 
 # opt-inルールの中で無効にするルール
+- array_init # sequenceからArrayへの変換をする際に、seq.map { $0 }と記述した炒め
 - conditional_returns_on_newline # ガード文などは簡潔に一行で記述したいため
 - discouraged_optional_collection # PHImageManagerの既存仕様のため
 - explicit_enum_raw_value # 暗黙的なraw値で問題ないため
