@@ -22,6 +22,12 @@
 		990D48C3287468D600ED407F /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48C1287468D600ED407F /* RestaurantTableViewCell.swift */; };
 		990D48C4287468D600ED407F /* RestaurantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 990D48C2287468D600ED407F /* RestaurantTableViewCell.xib */; };
 		990D48C72874762000ED407F /* Moya.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48C62874762000ED407F /* Moya.swift */; };
+		990D48C92875C88500ED407F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48C82875C88500ED407F /* Repository.swift */; };
+		990D48CB2875D7D300ED407F /* HotPepperResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48CA2875D7D300ED407F /* HotPepperResponse.swift */; };
+		990D48CD2876F56E00ED407F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48CC2876F56E00ED407F /* ErrorHandler.swift */; };
+		990D48D02876F78C00ED407F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48CF2876F78C00ED407F /* Error.swift */; };
+		990D48D42876FC2C00ED407F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48D32876FC2C00ED407F /* ListViewModel.swift */; };
+		990D48D7287754A900ED407F /* QueryShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48D6287754A900ED407F /* QueryShareManager.swift */; };
 		D2CA8EC12E1D7CE2AAF90337 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728434661EC948AE2A9FBB5 /* Pods_RestaurantSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +71,12 @@
 		990D48C1287468D600ED407F /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		990D48C2287468D600ED407F /* RestaurantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantTableViewCell.xib; sourceTree = "<group>"; };
 		990D48C62874762000ED407F /* Moya.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moya.swift; sourceTree = "<group>"; };
+		990D48C82875C88500ED407F /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		990D48CA2875D7D300ED407F /* HotPepperResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotPepperResponse.swift; sourceTree = "<group>"; };
+		990D48CC2876F56E00ED407F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		990D48CF2876F78C00ED407F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		990D48D32876FC2C00ED407F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		990D48D6287754A900ED407F /* QueryShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryShareManager.swift; sourceTree = "<group>"; };
 		C141697E020931AD5233EB09 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		D6E748F60EAC5FADD9660069 /* Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch-RestaurantSearchUITests/Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF70F0FAD748941CA1718DF0 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,16 +149,16 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				990D48D12876FB8400ED407F /* ViewModel */,
 				990D48C5287469AF00ED407F /* View */,
 				990D48BF28745D2900ED407F /* Model */,
+				990D48BD287453A800ED407F /* APIKey.swift */,
 				990D488A287439A100ED407F /* AppDelegate.swift */,
 				990D488C287439A100ED407F /* SceneDelegate.swift */,
-				990D488E287439A100ED407F /* ListViewController.swift */,
 				990D4890287439A100ED407F /* Main.storyboard */,
 				990D4893287439A300ED407F /* Assets.xcassets */,
 				990D4895287439A300ED407F /* LaunchScreen.storyboard */,
 				990D4898287439A300ED407F /* Info.plist */,
-				990D48BD287453A800ED407F /* APIKey.swift */,
 			);
 			path = RestaurantSearch;
 			sourceTree = "<group>";
@@ -171,7 +183,10 @@
 		990D48BF28745D2900ED407F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				990D48CA2875D7D300ED407F /* HotPepperResponse.swift */,
+				990D48CE2876F68100ED407F /* Error */,
 				990D48C028745D4500ED407F /* API */,
+				990D48D52877548C00ED407F /* Manager */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				990D48C62874762000ED407F /* Moya.swift */,
+				990D48C82875C88500ED407F /* Repository.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -187,10 +203,44 @@
 		990D48C5287469AF00ED407F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				990D488E287439A100ED407F /* ListViewController.swift */,
+				990D48D22876FBC900ED407F /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		990D48CE2876F68100ED407F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				990D48CC2876F56E00ED407F /* ErrorHandler.swift */,
+				990D48CF2876F78C00ED407F /* Error.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		990D48D12876FB8400ED407F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				990D48D32876FC2C00ED407F /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		990D48D22876FBC900ED407F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 				990D48C1287468D600ED407F /* RestaurantTableViewCell.swift */,
 				990D48C2287468D600ED407F /* RestaurantTableViewCell.xib */,
 			);
-			path = View;
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		990D48D52877548C00ED407F /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				990D48D6287754A900ED407F /* QueryShareManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 		FC9564BE071B8882F956652B /* Frameworks */ = {
@@ -462,12 +512,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990D48CB2875D7D300ED407F /* HotPepperResponse.swift in Sources */,
+				990D48C92875C88500ED407F /* Repository.swift in Sources */,
+				990D48D7287754A900ED407F /* QueryShareManager.swift in Sources */,
 				990D48C3287468D600ED407F /* RestaurantTableViewCell.swift in Sources */,
 				990D488F287439A100ED407F /* ListViewController.swift in Sources */,
 				990D488B287439A100ED407F /* AppDelegate.swift in Sources */,
 				990D48BE287453A800ED407F /* APIKey.swift in Sources */,
+				990D48CD2876F56E00ED407F /* ErrorHandler.swift in Sources */,
 				990D48C72874762000ED407F /* Moya.swift in Sources */,
+				990D48D02876F78C00ED407F /* Error.swift in Sources */,
 				990D488D287439A100ED407F /* SceneDelegate.swift in Sources */,
+				990D48D42876FC2C00ED407F /* ListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

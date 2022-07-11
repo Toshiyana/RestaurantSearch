@@ -11,7 +11,7 @@ import RxSwift
 final class APIResponseStatusCodeHandler {
     // ステータスコードハンドリング共通メソッド
     static func handleStatusCode(_ response: PrimitiveSequence<SingleTrait, Response>.Element) throws {
-        print("handleStatusCode: \(response.statusCode)")
+        print("DEBUG: handleStatusCode:: \(response.statusCode)")
         switch response.statusCode {
         case 200...399:
             break

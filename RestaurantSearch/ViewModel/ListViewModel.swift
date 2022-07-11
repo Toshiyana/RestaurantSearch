@@ -8,50 +8,66 @@
 import RxSwift
 import RxCocoa
 import PKHUD
+import Foundation
 
-protocol ListViewModelInputs {
-    func didSearch(query: String)
-}
+final class ListViewModel {
+    private let disposeBag = DisposeBag()
 
-protocol ListViewModelOutputs {
-    //    var hud: Driver<HUDContentType> { get }
-    var shops: Driver<[Shop]> { get }
-}
+    // MARK: - Output
+    var shops: [Shop] { return _shops.value }
+    private var _shops = BehaviorRelay<[Shop]>(value: [])
 
-protocol ListViewModelType {
-    var inputs: ListViewModelInputs { get }
-    var outputs: ListViewModelOutputs { get }
-}
+    let deselectRow: Observable<IndexPath>
+    let reloadData: Observable<Void>
+    let transitionToShopDetail: Observable<Shop>
 
-final class ListViewModel: ListViewModelInputs, ListViewModelOutputs {
-    init() {
-        shops = didSearchSubject.asObservable()
-            .filter { $0.count > 2 }
-            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+    var onShowLoadingHud: Observable<Bool> {
+        return loadInProgress
+            .asObservable()
             .distinctUntilChanged()
-            .flatMapLatest { text -> Observable<HotPepperResponse> in
+    }
+    private let loadInProgress = BehaviorRelay(value: false)
+
+    init(searchBarText: Observable<String?>,
+         searchButtonClicked: Observable<Void>,
+         itemSelected: Observable<IndexPath>) {
+        deselectRow = itemSelected.map { $0 }
+
+        reloadData = _shops.map { _ in }
+
+        transitionToShopDetail = itemSelected
+            .withLatestFrom(_shops) { ($0, $1) }
+            .flatMap { indexPath, shops -> Observable<Shop> in
+                guard indexPath.row < shops.count else { return .empty() }
+                return .just(shops[indexPath.row])
+            }
+
+        searchButtonClicked
+            .withLatestFrom(searchBarText)
+            .flatMapLatest { [weak self] text -> Observable<Event<HotPepperResponse>> in
+                guard let text = text else { return .empty() }
+                self?.loadInProgress.accept(true)
                 let shared = QueryShareManager.shared
                 shared.addQuery(key: "keyword", value: text)
-                return try Repository.search(keyValue: QueryShareManager.shared.getQuery())
+                return try Repository.search(keyValue: shared.getQuery())
+                    .materialize()
             }
-            .map { response -> [Shop] in
-                return response.results.shop
+            .subscribe { [weak self] event in
+                guard let strongSelf = self else { return }
+                print("DEBUG: event:: \(event)")
+                switch event.element! {
+                case .next(let response):
+                    print("DEBUG: response:: \(response.results.shop)")
+                    strongSelf.loadInProgress.accept(false)
+                    strongSelf._shops.accept(response.results.shop)
+                case .error(let error):
+                    // TODO: アラートを表示
+                    strongSelf.loadInProgress.accept(false)
+                    print("DEBUG: \(error.localizedDescription)")
+                case .completed:
+                    break
+                }
             }
-            .asDriver(onErrorJustReturn: [])
+            .disposed(by: disposeBag)
     }
-
-    // MARK: - ListViewModelInputs
-    private let didSearchSubject = PublishSubject<String>()
-    func didSearch(query: String) {
-        didSearchSubject.onNext(query)
-    }
-
-    // MARK: - ListViewModelOutputs
-    //    var hud: Driver<HUDContentType>
-    var shops: Driver<[Shop]>
-}
-
-extension ListViewModel: ListViewModelType {
-    var inputs: ListViewModelInputs { return self }
-    var outputs: ListViewModelOutputs { return self }
 }

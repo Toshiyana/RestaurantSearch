@@ -34,7 +34,7 @@ extension RestaurantAPI: TargetType {
         var parameter = [
             "key": APIKey.hotpepperApiKey,
             "format": "json",
-            "count": 50
+            "count": 10
         ] as [String: Any]
 
         switch self {

@@ -59,6 +59,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accessLabel" destination="HgB-xd-Jwp" id="yaa-6P-XhQ"/>
+                <outlet property="budgetLabel" destination="2hc-Fr-X2N" id="k03-xH-1hq"/>
+                <outlet property="restaurantImageView" destination="t7d-vi-oQC" id="tRR-rP-cEs"/>
+                <outlet property="restaurantNameLabel" destination="6LE-kM-biD" id="PAy-5i-BvQ"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="104.12946428571428"/>
         </tableViewCell>
     </objects>

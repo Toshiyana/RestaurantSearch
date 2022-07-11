@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RestaurantTableViewCell: UITableViewCell {
     static let identifier = "RestaurantTableViewCell"
@@ -14,12 +15,14 @@ class RestaurantTableViewCell: UITableViewCell {
     }
 
     @IBOutlet private weak var restaurantNameLabel: UILabel!
-    @IBOutlet private weak var valueRangeLabel: UILabel!
+    @IBOutlet private weak var budgetLabel: UILabel!
     @IBOutlet private weak var accessLabel: UILabel!
     @IBOutlet private weak var restaurantImageView: UIImageView!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(shop: Shop) {
+        restaurantNameLabel.text = shop.name
+        budgetLabel.text = shop.budget?.average
+        accessLabel.text = shop.access
+        restaurantImageView.kf.setImage(with: shop.logoImageUrl)
     }
 }

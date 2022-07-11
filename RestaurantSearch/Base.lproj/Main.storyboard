@@ -39,8 +39,7 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2EU-dX-UpH"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="TF4-Q6-L2l"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="DSv-Ln-fD6"/>
                                 </connections>
                             </tableView>
                         </subviews>
