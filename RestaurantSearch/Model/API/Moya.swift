@@ -56,7 +56,7 @@ extension RestaurantAPI: TargetType {
     var task: Task {
         switch self {
         case .search:
-            print("DEBUG: \(parameters)")
+            print("DEBUG: parameters:: \(parameters)")
             return .requestParameters(parameters: parameters, encoding: parameterEncoding)
         }
     }

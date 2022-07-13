@@ -15,7 +15,7 @@ final class ListViewModel {
 
     // MARK: - Output
     var shops: [Shop] { return _shops.value }
-    private var _shops = BehaviorRelay<[Shop]>(value: [])
+    private let _shops = BehaviorRelay<[Shop]>(value: [])
 
     let deselectRow: Observable<IndexPath>
     let reloadData: Observable<Void>
@@ -26,7 +26,11 @@ final class ListViewModel {
             .asObservable()
             .distinctUntilChanged()
     }
-    private let loadInProgress = BehaviorRelay(value: false)
+    private let loadInProgress = PublishSubject<Bool>()
+
+    let fetchMoreDatas = PublishSubject<Void>()
+    let isLoadingSpinnerAvailable = PublishSubject<Bool>()
+    private var pageCounter = 1
 
     init(searchBarText: Observable<String?>,
          searchButtonClicked: Observable<Void>,
@@ -44,9 +48,9 @@ final class ListViewModel {
 
         searchButtonClicked
             .withLatestFrom(searchBarText)
-            .flatMapLatest { [weak self] text -> Observable<Event<HotPepperResponse>> in
-                guard let text = text else { return .empty() }
-                self?.loadInProgress.accept(true)
+            .flatMapFirst { [weak self] text -> Observable<Event<HotPepperResponse>> in
+                guard let strongSelf = self, let text = text else { return .empty() }
+                strongSelf.loadInProgress.onNext(true)
                 let shared = QueryShareManager.shared
                 shared.addQuery(key: "keyword", value: text)
                 return try Repository.search(keyValue: shared.getQuery())
@@ -54,16 +58,56 @@ final class ListViewModel {
             }
             .subscribe { [weak self] event in
                 guard let strongSelf = self else { return }
-                print("DEBUG: event:: \(event)")
+                // print("DEBUG: event:: \(event)")
                 switch event.element! {
                 case .next(let response):
-                    print("DEBUG: response:: \(response.results.shop)")
-                    strongSelf.loadInProgress.accept(false)
+                    print("DEBUG: response count:: \(response.results.shop.count)")
+                    // print("DEBUG: response:: \(response.results.shop)")
+                    strongSelf.loadInProgress.onNext(false)
                     strongSelf._shops.accept(response.results.shop)
                 case .error(let error):
                     // TODO: アラートを表示
-                    strongSelf.loadInProgress.accept(false)
+                    strongSelf.loadInProgress.onNext(false)
                     print("DEBUG: \(error.localizedDescription)")
+                case .completed:
+                    break
+                }
+            }
+            .disposed(by: disposeBag)
+
+        fetchMoreDatas
+            .flatMapFirst { [weak self] _ -> Observable<Event<HotPepperResponse>> in
+                // queryにkeywordは保存されているから、searchBarTextの値はいらない。
+                guard let strongSelf = self,
+                      !strongSelf._shops.value.isEmpty
+                else { return .empty() }
+
+                strongSelf.isLoadingSpinnerAvailable.onNext(true)
+
+                let shared = QueryShareManager.shared
+
+                strongSelf.pageCounter += 10
+                shared.addQuery(key: "start", value: "\(strongSelf.pageCounter)")
+
+                return try Repository.search(keyValue: shared.getQuery())
+                    .materialize()
+            }
+            .subscribe { [weak self] event in
+                guard let strongSelf = self else { return }
+                // print("DEBUG: event:: \(event)")
+                switch event.element! {
+                case .next(let response):
+                    strongSelf.isLoadingSpinnerAvailable.onNext(false)
+                    guard !response.results.shop.isEmpty else { return }
+                    print("DEBUG: response count:: \(response.results.shop.count)")
+                    // print("DEBUG: response:: \(response.results.shop)")
+
+                    let oldData = strongSelf._shops.value
+                    strongSelf._shops.accept(oldData + response.results.shop)
+                case .error(let error):
+                    strongSelf.isLoadingSpinnerAvailable.onNext(false)
+                    print("DEBUG: \(error.localizedDescription)")
+                // TODO: アラートを表示
                 case .completed:
                     break
                 }
