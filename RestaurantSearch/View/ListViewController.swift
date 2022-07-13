@@ -70,7 +70,7 @@ final class ListViewController: UIViewController {
             .bind(to: reloadData)
             .disposed(by: disposeBag)
 
-        viewModel.onShowLoadingHud
+        viewModel.isLoadingHudAvailable
             .map { [weak self] in self?.setupLoadingHud(visible: $0) }
             .subscribe()
             .disposed(by: disposeBag)

@@ -21,12 +21,12 @@ final class ListViewModel {
     let reloadData: Observable<Void>
     let transitionToShopDetail: Observable<Shop>
 
-    var onShowLoadingHud: Observable<Bool> {
-        return loadInProgress
+    var isLoadingHudAvailable: Observable<Bool> {
+        return _isLoadingHudAvailable
             .asObservable()
             .distinctUntilChanged()
     }
-    private let loadInProgress = PublishSubject<Bool>()
+    private let _isLoadingHudAvailable = PublishSubject<Bool>()
 
     let fetchMoreDatas = PublishSubject<Void>()
     let isLoadingSpinnerAvailable = PublishSubject<Bool>()
@@ -50,7 +50,7 @@ final class ListViewModel {
             .withLatestFrom(searchBarText)
             .flatMapFirst { [weak self] text -> Observable<Event<HotPepperResponse>> in
                 guard let strongSelf = self, let text = text else { return .empty() }
-                strongSelf.loadInProgress.onNext(true)
+                strongSelf._isLoadingHudAvailable.onNext(true)
                 let shared = QueryShareManager.shared
                 shared.addQuery(key: "keyword", value: text)
                 return try Repository.search(keyValue: shared.getQuery())
@@ -63,11 +63,11 @@ final class ListViewModel {
                 case .next(let response):
                     print("DEBUG: response count:: \(response.results.shop.count)")
                     // print("DEBUG: response:: \(response.results.shop)")
-                    strongSelf.loadInProgress.onNext(false)
+                    strongSelf._isLoadingHudAvailable.onNext(false)
                     strongSelf._shops.accept(response.results.shop)
                 case .error(let error):
                     // TODO: アラートを表示
-                    strongSelf.loadInProgress.onNext(false)
+                    strongSelf._isLoadingHudAvailable.onNext(false)
                     print("DEBUG: \(error.localizedDescription)")
                 case .completed:
                     break
