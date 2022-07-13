@@ -30,7 +30,7 @@ final class ListViewModel {
 
     let fetchMoreDatas = PublishSubject<Void>()
     let isLoadingSpinnerAvailable = PublishSubject<Bool>()
-    private var pageCounter = 1
+    private var startIndex = 1
 
     init(searchBarText: Observable<String?>,
          searchButtonClicked: Observable<Void>,
@@ -86,8 +86,8 @@ final class ListViewModel {
 
                 let shared = QueryShareManager.shared
 
-                strongSelf.pageCounter += 10
-                shared.addQuery(key: "start", value: "\(strongSelf.pageCounter)")
+                strongSelf.startIndex += 10
+                shared.addQuery(key: "start", value: "\(strongSelf.startIndex)")
 
                 return try Repository.search(keyValue: shared.getQuery())
                     .materialize()
