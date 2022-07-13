@@ -61,7 +61,7 @@ final class ListViewModel {
                 // print("DEBUG: event:: \(event)")
                 switch event.element! {
                 case .next(let response):
-                    print("DEBUG: response count:: \(response.results.shop.count)")
+                    print("DEBUG: search response count:: \(response.results.shop.count)")
                     // print("DEBUG: response:: \(response.results.shop)")
                     strongSelf._isLoadingHudAvailable.onNext(false)
                     strongSelf._shops.accept(response.results.shop)
@@ -99,11 +99,12 @@ final class ListViewModel {
                 case .next(let response):
                     strongSelf.isLoadingSpinnerAvailable.onNext(false)
                     guard !response.results.shop.isEmpty else { return }
-                    print("DEBUG: response count:: \(response.results.shop.count)")
+                    // print("DEBUG: response count:: \(response.results.shop.count)")
                     // print("DEBUG: response:: \(response.results.shop)")
 
                     let oldData = strongSelf._shops.value
                     strongSelf._shops.accept(oldData + response.results.shop)
+                    print("DEBUG: all response count with pagination:: \(strongSelf._shops.value.count)")
                 case .error(let error):
                     strongSelf.isLoadingSpinnerAvailable.onNext(false)
                     print("DEBUG: \(error.localizedDescription)")
