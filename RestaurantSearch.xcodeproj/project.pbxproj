@@ -28,6 +28,8 @@
 		990D48D02876F78C00ED407F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48CF2876F78C00ED407F /* Error.swift */; };
 		990D48D42876FC2C00ED407F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48D32876FC2C00ED407F /* ListViewModel.swift */; };
 		990D48D7287754A900ED407F /* QueryShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48D6287754A900ED407F /* QueryShareManager.swift */; };
+		990D48E3287EAA7900ED407F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48E2287EAA7900ED407F /* DetailViewController.swift */; };
+		990D48E5287EC1C900ED407F /* DetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48E4287EC1C800ED407F /* DetailViewController.storyboard */; };
 		D2CA8EC12E1D7CE2AAF90337 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728434661EC948AE2A9FBB5 /* Pods_RestaurantSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		990D48CF2876F78C00ED407F /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		990D48D32876FC2C00ED407F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		990D48D6287754A900ED407F /* QueryShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryShareManager.swift; sourceTree = "<group>"; };
+		990D48E2287EAA7900ED407F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		990D48E4287EC1C800ED407F /* DetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailViewController.storyboard; sourceTree = "<group>"; };
 		C141697E020931AD5233EB09 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		D6E748F60EAC5FADD9660069 /* Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch-RestaurantSearchUITests/Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF70F0FAD748941CA1718DF0 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				990D48E1287EA68700ED407F /* DetailRestaurant */,
 				990D48E0287EA5E000ED407F /* Search */,
 				990D48BF28745D2900ED407F /* Model */,
 				990D48BD287453A800ED407F /* APIKey.swift */,
@@ -233,6 +238,15 @@
 				990D48D22876FBC900ED407F /* Cell */,
 			);
 			path = Search;
+			sourceTree = "<group>";
+		};
+		990D48E1287EA68700ED407F /* DetailRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				990D48E2287EAA7900ED407F /* DetailViewController.swift */,
+				990D48E4287EC1C800ED407F /* DetailViewController.storyboard */,
+			);
+			path = DetailRestaurant;
 			sourceTree = "<group>";
 		};
 		FC9564BE071B8882F956652B /* Frameworks */ = {
@@ -357,6 +371,7 @@
 			files = (
 				990D48C4287468D600ED407F /* RestaurantTableViewCell.xib in Resources */,
 				990D4897287439A300ED407F /* LaunchScreen.storyboard in Resources */,
+				990D48E5287EC1C900ED407F /* DetailViewController.storyboard in Resources */,
 				990D4894287439A300ED407F /* Assets.xcassets in Resources */,
 				990D4892287439A100ED407F /* Main.storyboard in Resources */,
 			);
@@ -504,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				990D48E3287EAA7900ED407F /* DetailViewController.swift in Sources */,
 				990D48CB2875D7D300ED407F /* HotPepperResponse.swift in Sources */,
 				990D48C92875C88500ED407F /* Repository.swift in Sources */,
 				990D48D7287754A900ED407F /* QueryShareManager.swift in Sources */,

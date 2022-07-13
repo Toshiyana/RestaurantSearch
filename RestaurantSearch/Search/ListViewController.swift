@@ -70,6 +70,10 @@ final class ListViewController: UIViewController {
             .bind(to: reloadData)
             .disposed(by: disposeBag)
 
+        viewModel.transitionToShopDetail
+            .bind(to: transitionToShopDetail)
+            .disposed(by: disposeBag)
+
         viewModel.isLoadingHudAvailable
             .map { [weak self] in self?.setupLoadingHud(visible: $0) }
             .subscribe()
@@ -121,6 +125,14 @@ extension ListViewController {
     private var reloadData: Binder<Void> {
         return Binder(self) { vc, _ in
             vc.tableView.reloadData()
+        }
+    }
+
+    private var transitionToShopDetail: Binder<Shop> {
+        return Binder(self) { vc, shop in
+            let detailVC = UIStoryboard(name: "DetailViewController", bundle: nil).instantiateInitialViewController() as! DetailViewController
+            detailVC.shop = shop
+            vc.navigationController?.pushViewController(detailVC, animated: true)
         }
     }
 }

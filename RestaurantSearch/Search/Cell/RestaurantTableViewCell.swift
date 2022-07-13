@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class RestaurantTableViewCell: UITableViewCell {
+final class RestaurantTableViewCell: UITableViewCell {
     static let identifier = "RestaurantTableViewCell"
     static func nib() -> UINib {
         return UINib(nibName: identifier, bundle: nil)
