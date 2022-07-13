@@ -149,8 +149,7 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
-				990D48D12876FB8400ED407F /* ViewModel */,
-				990D48C5287469AF00ED407F /* View */,
+				990D48E0287EA5E000ED407F /* Search */,
 				990D48BF28745D2900ED407F /* Model */,
 				990D48BD287453A800ED407F /* APIKey.swift */,
 				990D488A287439A100ED407F /* AppDelegate.swift */,
@@ -200,15 +199,6 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		990D48C5287469AF00ED407F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				990D488E287439A100ED407F /* ListViewController.swift */,
-				990D48D22876FBC900ED407F /* Cell */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		990D48CE2876F68100ED407F /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,14 +206,6 @@
 				990D48CF2876F78C00ED407F /* Error.swift */,
 			);
 			path = Error;
-			sourceTree = "<group>";
-		};
-		990D48D12876FB8400ED407F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				990D48D32876FC2C00ED407F /* ListViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		990D48D22876FBC900ED407F /* Cell */ = {
@@ -241,6 +223,16 @@
 				990D48D6287754A900ED407F /* QueryShareManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		990D48E0287EA5E000ED407F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				990D488E287439A100ED407F /* ListViewController.swift */,
+				990D48D32876FC2C00ED407F /* ListViewModel.swift */,
+				990D48D22876FBC900ED407F /* Cell */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		FC9564BE071B8882F956652B /* Frameworks */ = {
