@@ -75,6 +75,14 @@ final class ListViewController: UIViewController {
             .subscribe()
             .disposed(by: disposeBag)
 
+        viewModel.shops
+            .bind(to: tableView.rx.items) { tableView, _, shop in
+                let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as! RestaurantTableViewCell
+                cell.configure(shop: shop)
+                return cell
+            }
+            .disposed(by: disposeBag)
+
         viewModel.isLoadingSpinnerAvailable
             .subscribe { [weak self] isAvailable in
                 guard let isAvailable = isAvailable.element,
@@ -99,22 +107,6 @@ final class ListViewController: UIViewController {
     private func setupLoadingHud(visible: Bool) {
         PKHUD.sharedHUD.contentView = PKHUDSystemActivityIndicatorView()
         visible ? PKHUD.sharedHUD.show(onView: view) : PKHUD.sharedHUD.hide()
-    }
-}
-
-extension ListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.shops.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier, for: indexPath) as! RestaurantTableViewCell
-
-        // print("DEBUG: shops:: \(viewModel.shops)")
-
-        let shop = viewModel.shops[indexPath.row]
-        cell.configure(shop: shop)
-        return cell
     }
 }
 

@@ -14,7 +14,7 @@ final class ListViewModel {
     private let disposeBag = DisposeBag()
 
     // MARK: - Output
-    var shops: [Shop] { return _shops.value }
+    var shops: Observable<[Shop]> { return _shops.asObservable() }
     private let _shops = BehaviorRelay<[Shop]>(value: [])
 
     let deselectRow: Observable<IndexPath>
