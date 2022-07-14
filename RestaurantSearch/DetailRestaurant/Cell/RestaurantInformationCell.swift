@@ -7,17 +7,17 @@
 
 import UIKit
 
-class RestaurantInformationCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+final class RestaurantInformationCell: UITableViewCell {
+    static let identifier = "RestaurantInformationCell"
+    static func nib() -> UINib {
+        return UINib(nibName: identifier, bundle: nil)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBOutlet private weak var infoNameLabel: UILabel!
+    @IBOutlet private weak var infoValueLabel: UILabel!
 
-        // Configure the view for the selected state
+    func configure(infoName: String, infoValue: String) {
+        infoNameLabel.text = infoName
+        infoValueLabel.text = infoValue
     }
-    
 }

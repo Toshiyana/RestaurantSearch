@@ -22,7 +22,7 @@ final class RestaurantTableViewCell: UITableViewCell {
     func configure(shop: Shop) {
         restaurantNameLabel.text = shop.name
         budgetLabel.text = shop.budget?.average
-        accessLabel.text = shop.access
+        accessLabel.text = shop.mobileAccess
         restaurantImageView.kf.setImage(with: shop.logoImageUrl)
     }
 }

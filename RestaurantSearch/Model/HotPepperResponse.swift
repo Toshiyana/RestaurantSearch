@@ -48,24 +48,24 @@ struct Shop: Codable, Identifiable {
     let budget: Budget?
     let budgetMemo: String?
     let `catch`: String
-    let capacity: Int?
-    let access: String // 必須
-    //    let mobileAccess: String?
+    //    let capacity: Int?
+    // let access: String
+    let mobileAccess: String?
     let urls: Urls
     let photo: Photo
     let open: String?
     let close: String?
     //    let partyCapacity: Int?
-    let wifi: String?
+    //    let wifi: String?
     //    let wedding: String?
     //    let course: String?
-    //    let freeDrink: String?
-    //    let freeFood: String?
+    let freeDrink: String?
+    let freeFood: String?
     //    let privateRoom: String?
     //    let horigotatsu: String?
     //    let tatami: String?
     //    let card: String?
-    let nonSmoking: String?
+    //    let nonSmoking: String?
     //    let charter: String?
     //    let ktai: String?
     //    let parking: String?
@@ -106,24 +106,24 @@ struct Shop: Codable, Identifiable {
         case budget
         case budgetMemo = "budget_memo"
         case `catch`
-        case capacity
-        case access
-        //        case mobileAccess = "mobile_access"
+        //        case capacity
+        //        case access
+        case mobileAccess = "mobile_access"
         case urls
         case photo
         case open
         case close
         //        case partyCapacity = "party_capacity"
-        case wifi
+        //        case wifi
         //        case wedding
         //        case course
-        //        case freeDrink = "free_drink"
-        //        case freeFood = "free_food"
+        case freeDrink = "free_drink"
+        case freeFood = "free_food"
         //        case privateRoom = "private_room"
         //        case horigotatsu
         //        case tatami
         //        case card
-        case nonSmoking = "non_smoking"
+        //        case nonSmoking = "non_smoking"
         //        case charter
         //        case ktai
         //        case parking
