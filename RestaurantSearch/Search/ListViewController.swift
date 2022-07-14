@@ -39,6 +39,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        searchBar.backgroundImage = UIImage() // 上下の線を除去
         tableView.register(RestaurantTableViewCell.nib(), forCellReuseIdentifier: RestaurantTableViewCell.identifier)
         //        setupLocationManager()
         bindViewModel()
@@ -104,6 +105,14 @@ final class ListViewController: UIViewController {
                 if offSetY > (contentHeight - strongSelf.tableView.frame.size.height - 100) {
                     strongSelf.viewModel.fetchMoreDatas.onNext(())
                 }
+            }
+            .disposed(by: disposeBag)
+
+        filteringButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                let searchFilterVC = UIStoryboard(name: "SearchFilterViewController", bundle: nil).instantiateInitialViewController() as! SearchFilterViewController
+                strongSelf.present(searchFilterVC, animated: true)
             }
             .disposed(by: disposeBag)
     }

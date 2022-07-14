@@ -23,7 +23,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("DEBUG: shop:: \(shop)")
+        // print("DEBUG: shop:: \(shop)")
 
         infoValue = [shop.address, shop.mobileAccess!, shop.genre.name, shop.catch,
                      shop.open!, shop.close!, shop.freeDrink!]

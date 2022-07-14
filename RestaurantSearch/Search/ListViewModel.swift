@@ -5,10 +5,10 @@
 //  Created by Toshiyana on 2022/07/07.
 //
 
+import Foundation
 import RxSwift
 import RxCocoa
 import PKHUD
-import Foundation
 
 final class ListViewModel {
     private let disposeBag = DisposeBag()
