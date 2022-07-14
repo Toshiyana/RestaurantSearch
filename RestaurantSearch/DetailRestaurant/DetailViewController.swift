@@ -8,11 +8,6 @@
 import UIKit
 import Kingfisher
 
-// enum information: Int {
-//    case tellephone
-//    case access
-// }
-
 final class DetailViewController: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
