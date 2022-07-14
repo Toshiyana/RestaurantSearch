@@ -39,10 +39,14 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //        setupLocationManager()
+        setupUI()
+        bindViewModel()
+    }
+
+    private func setupUI() {
         searchBar.backgroundImage = UIImage() // 上下の線を除去
         tableView.register(RestaurantTableViewCell.nib(), forCellReuseIdentifier: RestaurantTableViewCell.identifier)
-        //        setupLocationManager()
-        bindViewModel()
     }
 
     //    private func setupLocationManager() {
