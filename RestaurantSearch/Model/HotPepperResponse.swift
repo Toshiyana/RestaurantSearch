@@ -60,12 +60,12 @@ struct Shop: Codable, Identifiable {
     //    let wedding: String?
     //    let course: String?
     let freeDrink: String?
-    let freeFood: String?
+    //    let freeFood: String?
     //    let privateRoom: String?
     //    let horigotatsu: String?
     //    let tatami: String?
     //    let card: String?
-    //    let nonSmoking: String?
+    let nonSmoking: String?
     //    let charter: String?
     //    let ktai: String?
     //    let parking: String?
@@ -118,12 +118,12 @@ struct Shop: Codable, Identifiable {
         //        case wedding
         //        case course
         case freeDrink = "free_drink"
-        case freeFood = "free_food"
+        //        case freeFood = "free_food"
         //        case privateRoom = "private_room"
         //        case horigotatsu
         //        case tatami
         //        case card
-        //        case nonSmoking = "non_smoking"
+        case nonSmoking = "non_smoking"
         //        case charter
         //        case ktai
         //        case parking

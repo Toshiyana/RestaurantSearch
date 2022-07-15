@@ -17,7 +17,7 @@ final class DetailViewController: UIViewController {
 
     var shop: Shop! // ListVCから値を受け取る
     private let infoName = ["住所", "交通アクセス", "ジャンル", "お店キャッチ",
-                            "営業時間", "定休日", "飲み放題"]
+                            "営業時間", "定休日", "禁煙席", "飲み放題"]
     private var infoValue: [String]!
 
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ final class DetailViewController: UIViewController {
         // print("DEBUG: shop:: \(shop)")
 
         infoValue = [shop.address, shop.mobileAccess!, shop.genre.name, shop.catch,
-                     shop.open!, shop.close!, shop.freeDrink!]
+                     shop.open!, shop.close!, shop.nonSmoking!, shop.freeDrink!]
 
         tableView.register(RestaurantInformationCell.nib(), forCellReuseIdentifier: RestaurantInformationCell.identifier)
 
