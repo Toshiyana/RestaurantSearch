@@ -13,23 +13,23 @@ import PKHUD
 final class ListViewModel {
     private let disposeBag = DisposeBag()
 
-    // MARK: - Output
-    var shops: Observable<[Shop]> { return _shops.asObservable() }
-    private let _shops = BehaviorRelay<[Shop]>(value: [])
-
+    // MARK: - Input
     let deselectRow: Observable<IndexPath>
     let reloadData: Observable<Void>
     let transitionToShopDetail: Observable<Shop>
 
+    // MARK: - Output
+    var shops: Observable<[Shop]> { return _shops.asObservable() }
+    private let _shops = BehaviorRelay<[Shop]>(value: [])
     var isLoadingHudAvailable: Observable<Bool> {
         return _isLoadingHudAvailable
             .asObservable()
             .distinctUntilChanged()
     }
     private let _isLoadingHudAvailable = PublishSubject<Bool>()
-
     let fetchMoreData = PublishSubject<Void>()
     let isLoadingSpinnerAvailable = PublishSubject<Bool>()
+
     private var startIndex = 1
     private let numberOfRequestingData = 10
 
@@ -54,6 +54,11 @@ final class ListViewModel {
                 strongSelf._isLoadingHudAvailable.onNext(true)
                 let shared = QueryShareManager.shared
                 shared.addQuery(key: "keyword", value: text)
+
+                // startIndexを初期化
+                strongSelf.startIndex = 1
+                shared.addQuery(key: "start", value: "\(strongSelf.startIndex)")
+
                 return try Repository.search(keyValue: shared.getQuery())
                     .materialize()
             }
