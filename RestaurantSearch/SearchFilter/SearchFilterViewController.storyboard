@@ -79,7 +79,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="~ 2,000 m">
-                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtS-v8-BIn">
@@ -91,7 +91,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="~ 3,000 m">
-                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -108,7 +108,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="~ 300 m">
-                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-hY-cZG">
@@ -120,7 +120,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="~ 500 m">
-                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg9-wO-hpu">
@@ -132,7 +132,7 @@
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" title="~ 1,000 m">
-                                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
                                                             </button>
                                                         </subviews>
@@ -147,15 +147,137 @@
                                                     <constraint firstItem="A1m-QH-eu0" firstAttribute="top" secondItem="wRu-Sm-Jlz" secondAttribute="bottom" constant="24" id="nxo-Pn-num"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQl-NZ-XEx">
+                                                <rect key="frame" x="0.0" y="186" width="414" height="70"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="100-lQ-Hwk">
+                                                        <rect key="frame" x="25" y="15" width="106" height="40"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homepod.2" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nrT-TB-aTR">
+                                                                <rect key="frame" x="0.0" y="-1" width="40" height="41.5"/>
+                                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="40" id="Oou-1C-j43"/>
+                                                                    <constraint firstAttribute="height" constant="40" id="mks-CF-w88"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お酒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogC-Zv-nC3">
+                                                                <rect key="frame" x="59" y="0.0" width="47" height="40"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="100-lQ-Hwk" firstAttribute="leading" secondItem="RQl-NZ-XEx" secondAttribute="leading" constant="25" id="KYl-5x-cs9"/>
+                                                    <constraint firstItem="100-lQ-Hwk" firstAttribute="top" secondItem="RQl-NZ-XEx" secondAttribute="top" constant="15" id="Vqk-NB-HRo"/>
+                                                    <constraint firstAttribute="height" constant="70" id="Zq0-1J-a5G"/>
+                                                    <constraint firstAttribute="bottom" secondItem="100-lQ-Hwk" secondAttribute="bottom" constant="15" id="ous-f2-atl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRT-aj-Wqy">
+                                                <rect key="frame" x="0.0" y="264" width="414" height="100"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KCV-K0-Flr">
+                                                        <rect key="frame" x="17" y="8" width="358" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap9-uK-cSE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="106" id="WAe-f9-DEo"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="Xwe-3x-41A"/>
+                                                                </constraints>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="日本酒充実">
+                                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <buttonConfiguration key="configuration" style="plain" title="日本酒充実">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5i-DF-PuR">
+                                                                <rect key="frame" x="126" y="0.0" width="120" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="HnU-jD-2ET"/>
+                                                                    <constraint firstAttribute="width" constant="120" id="tXS-c0-GqE"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="カクテル充実">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGL-Vw-Ffa">
+                                                                <rect key="frame" x="266" y="0.0" width="92" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="92" id="duH-Tk-OSD"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="qbn-dL-qGM"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="焼酎充実">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tLG-hg-qjJ">
+                                                        <rect key="frame" x="17" y="62" width="246" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14J-xX-PYT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="106" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="106" id="2wE-H3-H9I"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="YSw-sW-qhc"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="ワイン充実">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngC-kv-tGz">
+                                                                <rect key="frame" x="126" y="0.0" width="120" height="30"/>
+                                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="120" id="T3o-s2-EJk"/>
+                                                                    <constraint firstAttribute="height" constant="30" id="Uku-f9-BOj"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="飲み放題あり">
+                                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </buttonConfiguration>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="FYK-bR-uOE"/>
+                                                    <constraint firstItem="tLG-hg-qjJ" firstAttribute="top" secondItem="KCV-K0-Flr" secondAttribute="bottom" constant="24" id="W2F-Re-ENP"/>
+                                                    <constraint firstItem="KCV-K0-Flr" firstAttribute="leading" secondItem="pRT-aj-Wqy" secondAttribute="leading" constant="17" id="a4Q-PX-t1y"/>
+                                                    <constraint firstItem="tLG-hg-qjJ" firstAttribute="leading" secondItem="pRT-aj-Wqy" secondAttribute="leading" constant="17" id="cej-Fg-5Qi"/>
+                                                    <constraint firstItem="KCV-K0-Flr" firstAttribute="top" secondItem="pRT-aj-Wqy" secondAttribute="top" constant="8" id="p2D-vk-Hhh"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="pRT-aj-Wqy" firstAttribute="leading" secondItem="kNz-wl-DhW" secondAttribute="leading" id="26P-nr-Tee"/>
                                             <constraint firstItem="Ctu-hb-0Rf" firstAttribute="leading" secondItem="kNz-wl-DhW" secondAttribute="leading" id="2HA-hC-q0v"/>
                                             <constraint firstAttribute="trailing" secondItem="Ctu-hb-0Rf" secondAttribute="trailing" id="39o-18-dZx"/>
                                             <constraint firstAttribute="trailing" secondItem="7En-rg-xpf" secondAttribute="trailing" id="AQu-sb-hxL"/>
                                             <constraint firstItem="Ctu-hb-0Rf" firstAttribute="top" secondItem="kNz-wl-DhW" secondAttribute="top" id="Dhl-GL-zRe"/>
+                                            <constraint firstItem="pRT-aj-Wqy" firstAttribute="top" secondItem="RQl-NZ-XEx" secondAttribute="bottom" constant="8" symbolic="YES" id="FJr-Pc-MNY"/>
                                             <constraint firstItem="7En-rg-xpf" firstAttribute="leading" secondItem="kNz-wl-DhW" secondAttribute="leading" id="Np4-hs-p5J"/>
+                                            <constraint firstItem="RQl-NZ-XEx" firstAttribute="top" secondItem="7En-rg-xpf" secondAttribute="bottom" constant="8" symbolic="YES" id="Ntp-bp-7l9"/>
+                                            <constraint firstAttribute="trailing" secondItem="RQl-NZ-XEx" secondAttribute="trailing" id="Z65-RC-CaZ"/>
+                                            <constraint firstItem="RQl-NZ-XEx" firstAttribute="leading" secondItem="kNz-wl-DhW" secondAttribute="leading" id="o9o-Z8-kPk"/>
                                             <constraint firstItem="7En-rg-xpf" firstAttribute="top" secondItem="Ctu-hb-0Rf" secondAttribute="bottom" constant="8" symbolic="YES" id="rh0-qd-vRK"/>
+                                            <constraint firstAttribute="trailing" secondItem="pRT-aj-Wqy" secondAttribute="trailing" id="zUH-n0-Lmw"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -185,12 +307,17 @@
                     </view>
                     <connections>
                         <outlet property="closeBarButton" destination="mTs-vv-koi" id="czX-mf-6m4"/>
+                        <outlet property="cocktailButton" destination="w5i-DF-PuR" id="uim-mc-yUF"/>
                         <outlet property="decideBarButton" destination="SYh-FD-utB" id="Uxr-Wo-JaE"/>
+                        <outlet property="freeDrinkButton" destination="ngC-kv-tGz" id="HuO-dU-Fcc"/>
+                        <outlet property="japaneseSakeButton" destination="ap9-uK-cSE" id="Bgk-Ho-p8l"/>
                         <outlet property="rangeFifthButton" destination="dtS-v8-BIn" id="heH-6n-a31"/>
                         <outlet property="rangeFirstButton" destination="zY8-JV-xWH" id="DfG-lT-at8"/>
                         <outlet property="rangeFourthButton" destination="4ev-gb-QIj" id="rAj-4E-GCh"/>
                         <outlet property="rangeSecondButton" destination="eT4-hY-cZG" id="e2H-nb-MHW"/>
                         <outlet property="rangeThirdButton" destination="fg9-wO-hpu" id="AK4-QU-bTn"/>
+                        <outlet property="shochuButton" destination="uGL-Vw-Ffa" id="Q2G-5C-YTP"/>
+                        <outlet property="wineButton" destination="14J-xX-PYT" id="foC-bW-hvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -199,10 +326,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homepod.2" catalog="system" width="128" height="114"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
