@@ -28,9 +28,10 @@ final class ListViewModel {
     }
     private let _isLoadingHudAvailable = PublishSubject<Bool>()
 
-    let fetchMoreDatas = PublishSubject<Void>()
+    let fetchMoreData = PublishSubject<Void>()
     let isLoadingSpinnerAvailable = PublishSubject<Bool>()
     private var startIndex = 1
+    private let numberOfRequestingData = 10
 
     init(searchBarText: Observable<String?>,
          searchButtonClicked: Observable<Void>,
@@ -75,7 +76,7 @@ final class ListViewModel {
             }
             .disposed(by: disposeBag)
 
-        fetchMoreDatas
+        fetchMoreData
             .flatMapFirst { [weak self] _ -> Observable<Event<HotPepperResponse>> in
                 // queryにkeywordは保存されているから、searchBarTextの値はいらない。
                 guard let strongSelf = self,
@@ -86,7 +87,7 @@ final class ListViewModel {
 
                 let shared = QueryShareManager.shared
 
-                strongSelf.startIndex += 10
+                strongSelf.startIndex += strongSelf.numberOfRequestingData
                 shared.addQuery(key: "start", value: "\(strongSelf.startIndex)")
 
                 return try Repository.search(keyValue: shared.getQuery())
@@ -98,7 +99,10 @@ final class ListViewModel {
                 switch event.element! {
                 case .next(let response):
                     strongSelf.isLoadingSpinnerAvailable.onNext(false)
-                    guard !response.results.shop.isEmpty else { return }
+                    guard !response.results.shop.isEmpty else {
+                        strongSelf.startIndex -= strongSelf.numberOfRequestingData
+                        return
+                    }
                     // print("DEBUG: response count:: \(response.results.shop.count)")
                     // print("DEBUG: response:: \(response.results.shop)")
 
