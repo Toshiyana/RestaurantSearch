@@ -39,7 +39,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //        setupLocationManager()
+        setupLocationManager()
         setupUI()
         bindViewModel()
     }
@@ -49,22 +49,22 @@ final class ListViewController: UIViewController {
         tableView.register(RestaurantTableViewCell.nib(), forCellReuseIdentifier: RestaurantTableViewCell.identifier)
     }
 
-    //    private func setupLocationManager() {
-    //        locationManager.requestWhenInUseAuthorization()
-    //
-    //        guard CLLocationManager.locationServicesEnabled() else { return }
-    //        locationManager.delegate = self
-    //        locationManager.requestLocation()
-    //
-    //        //        guard let location = locationManager.location?.coordinate else { return }
-    //        //        QueryShareManager.shared.addQuery(key: "lat", value: "\(location.latitude)")
-    //        //        QueryShareManager.shared.addQuery(key: "lng", value: "\(location.longitude)")
-    //        //        print("DEBUG: lat: \(location.latitude), lng: \(location.longitude)")
-    //
-    //        //            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-    //        //            locationManager.startUpdatingLocation()
-    //
-    //    }
+    private func setupLocationManager() {
+        locationManager.requestWhenInUseAuthorization()
+
+        guard CLLocationManager.locationServicesEnabled() else { return }
+        locationManager.delegate = self
+        locationManager.requestLocation()
+
+        //        guard let location = locationManager.location?.coordinate else { return }
+        //        QueryShareManager.shared.addQuery(key: "lat", value: "\(location.latitude)")
+        //        QueryShareManager.shared.addQuery(key: "lng", value: "\(location.longitude)")
+        //        print("DEBUG: lat: \(location.latitude), lng: \(location.longitude)")
+
+        //            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //            locationManager.startUpdatingLocation()
+
+    }
 
     private func bindViewModel() {
         viewModel.deselectRow
@@ -107,7 +107,7 @@ final class ListViewController: UIViewController {
                 let contentHeight = strongSelf.tableView.contentSize.height
 
                 if offSetY > (contentHeight - strongSelf.tableView.frame.size.height - 100) {
-                    strongSelf.viewModel.fetchMoreDatas.onNext(())
+                    strongSelf.viewModel.fetchMoreData.onNext(())
                 }
             }
             .disposed(by: disposeBag)
@@ -151,37 +151,37 @@ extension ListViewController {
 }
 
 // MARK: - CLLocationManagerDelegate
-// extension ListViewController: CLLocationManagerDelegate {
-//    // 位置情報の認可状態が変化した際に呼び出すメソッド
-//    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
-//        switch locationManager.authorizationStatus {
-//        case .authorizedWhenInUse:
-//            locationManager.delegate = self
-//            locationManager.requestLocation()
-//        case .notDetermined:
-//            locationManager.requestWhenInUseAuthorization()
-//        default:
-//            return
-//        }
-//    }
-//
-//    // 位置情報が変化した時に呼び出すメソッド
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        guard let locValue = locations.last else { return }
-//        locationManager.stopUpdatingLocation()
-//
-//        // 位置情報が変わるたびにQueryのlat, lngを更新する
-//        let lat = locValue.coordinate.latitude
-//        let lng = locValue.coordinate.longitude
-//
-//        QueryShareManager.shared.addQuery(key: "lat", value: "\(lat)")
-//        QueryShareManager.shared.addQuery(key: "lng", value: "\(lng)")
-//
-//        print("DEBUG: lat: \(lat), lng: \(lng)")
-//    }
-//
-//    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-//        // TODO: エラーメッセージ画面に表示
-//        print(error)
-//    }
-// }
+extension ListViewController: CLLocationManagerDelegate {
+    // 位置情報の認可状態が変化した際に呼び出すメソッド
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch locationManager.authorizationStatus {
+        case .authorizedWhenInUse:
+            locationManager.delegate = self
+            locationManager.requestLocation()
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+        default:
+            return
+        }
+    }
+
+    // 位置情報が変化した時に呼び出すメソッド
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue = locations.last else { return }
+        //        locationManager.stopUpdatingLocation()
+
+        // 位置情報が変わるたびにQueryのlat, lngを更新する
+        let lat = locValue.coordinate.latitude
+        let lng = locValue.coordinate.longitude
+
+        QueryShareManager.shared.addQuery(key: "lat", value: "\(lat)")
+        QueryShareManager.shared.addQuery(key: "lng", value: "\(lng)")
+
+        print("DEBUG: lat: \(lat), lng: \(lng)")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // TODO: エラーメッセージ画面に表示
+        print(error)
+    }
+}
