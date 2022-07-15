@@ -23,7 +23,17 @@ final class QueryShareManager {
     func getQuery() -> [String: Any] {
         return QueryShareManager.shared.queries
     }
-    //
+
+    func addQuery(key: String, filterEvent: Event<Int>) {
+        guard let filterValue = filterEvent.element else { return }
+        if filterValue == 0 {
+            QueryShareManager.shared.addQuery(key: key, value: nil)
+            return
+        } else {
+            QueryShareManager.shared.addQuery(key: key, value: "\(filterValue)")
+        }
+    }
+
     //    func resetQuery() {
     //        QueryShareManager.shared.queries = [:]
     //
@@ -32,13 +42,5 @@ final class QueryShareManager {
     //            QueryShareManager.shared.addQuery(key: "lng", value: "\(location.longitude)")
     //        }
     //        print("DEBUG: query by resetQuery(), \(queries)")
-    //    }
-    //
-    //    func addQuery(key: String, int: Event<Int>) {
-    //        if let int = int.element, int == 0 {
-    //            QueryShareManager.shared.addQuery(key: key, value: nil)
-    //            return
-    //        }
-    //        QueryShareManager.shared.addQuery(key: key, value: "\(int.element ?? 0)")
     //    }
 }
