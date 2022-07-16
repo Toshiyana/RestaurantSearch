@@ -32,6 +32,7 @@ final class ListViewModel {
 
     private var startIndex = 1
     private let numberOfRequestingData = 10
+    private var isMoreData = true // ページネーションでデータがそれ以上存在しない時に、fetchMoreDataできないようにするためのフラグ
 
     init(searchBarText: Observable<String?>,
          searchButtonClicked: Observable<Void>,
@@ -58,6 +59,8 @@ final class ListViewModel {
                 // startIndexを初期化
                 strongSelf.startIndex = 1
                 shared.addQuery(key: "start", value: "\(strongSelf.startIndex)")
+                // isMoreDataを初期化
+                strongSelf.isMoreData = true
 
                 return try Repository.search(keyValue: shared.getQuery())
                     .materialize()
@@ -85,7 +88,8 @@ final class ListViewModel {
             .flatMapFirst { [weak self] _ -> Observable<Event<HotPepperResponse>> in
                 // queryにkeywordは保存されているから、searchBarTextの値はいらない。
                 guard let strongSelf = self,
-                      !strongSelf._shops.value.isEmpty
+                      !strongSelf._shops.value.isEmpty,
+                      strongSelf.isMoreData
                 else { return .empty() }
 
                 strongSelf.isLoadingSpinnerAvailable.onNext(true)
@@ -106,6 +110,7 @@ final class ListViewModel {
                     strongSelf.isLoadingSpinnerAvailable.onNext(false)
                     guard !response.results.shop.isEmpty else {
                         strongSelf.startIndex -= strongSelf.numberOfRequestingData
+                        strongSelf.isMoreData = false
                         return
                     }
                     // print("DEBUG: response count:: \(response.results.shop.count)")
