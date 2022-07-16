@@ -13,7 +13,7 @@ final class DetailViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
 
-    @IBOutlet weak var tableViewHeightConstant: NSLayoutConstraint!
+    @IBOutlet weak var tableViewHeightConstant: NSLayoutConstraint! // ScrollView内におけるTableViewのHeightを自動調整するための変数
 
     var shop: Shop! // ListVCから値を受け取る
     private let infoName = ["住所", "交通アクセス", "ジャンル", "お店キャッチ",
