@@ -93,6 +93,48 @@ final class SearchFilterViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
+        // MARK: - お酒
+        japaneseSakeButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.japaneseSakeButton)
+                strongSelf.viewModel.japaneseSakeSelected.onNext(strongSelf.japaneseSakeButton.tag)
+            }
+            .disposed(by: disposeBag)
+
+        cocktailButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.cocktailButton)
+                strongSelf.viewModel.cocktailSelected.onNext(strongSelf.cocktailButton.tag)
+            }
+            .disposed(by: disposeBag)
+
+        shochuButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.shochuButton)
+                strongSelf.viewModel.shochuSelected.onNext(strongSelf.shochuButton.tag)
+            }
+            .disposed(by: disposeBag)
+
+        wineButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.wineButton)
+                strongSelf.viewModel.wineSelected.onNext(strongSelf.wineButton.tag)
+            }
+            .disposed(by: disposeBag)
+
+        freeDrinkButton.rx.tap
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.freeDrinkButton)
+                strongSelf.viewModel.freeDrinkSelected.onNext(strongSelf.freeDrinkButton.tag)
+            }
+            .disposed(by: disposeBag)
+
+        // MARK: - フィルターの有効確認
         viewModel.activeRange
             .subscribe { [weak self] rangeNumber in
                 guard let strongSelf = self else { return }
@@ -111,7 +153,35 @@ final class SearchFilterViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
-        viewModel.getFilterSetting.onNext(Void())
+        viewModel.activeJapaneseSake
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.japaneseSakeButton)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.activeCocktail
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.cocktailButton)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.activeShochu
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.shochuButton)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.activeFreeDrink
+            .subscribe { [weak self] _ in
+                guard let strongSelf = self else { return }
+                strongSelf.activeButton(button: strongSelf.freeDrinkButton)
+            }
+            .disposed(by: disposeBag)
+
+        viewModel.getFilterSetting.onNext(Void()) // 最後に実行
     }
 
     private func activeRange(button: UIButton, active: Bool) {
@@ -119,6 +189,18 @@ final class SearchFilterViewController: UIViewController {
             button.backgroundColor = .systemIndigo
             button.setTitleColor(.white, for: .normal)
         } else {
+            button.backgroundColor = .systemGray5
+            button.setTitleColor(.black, for: .normal)
+        }
+    }
+
+    private func activeButton(button: UIButton) {
+        if button.tag == 0 {
+            button.tag = 1
+            button.backgroundColor = .systemIndigo
+            button.setTitleColor(.white, for: .normal)
+        } else {
+            button.tag = 0
             button.backgroundColor = .systemGray5
             button.setTitleColor(.black, for: .normal)
         }
