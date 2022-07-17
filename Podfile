@@ -12,6 +12,7 @@ target 'RestaurantSearch' do
   pod 'Moya/RxSwift', '~> 15.0'
   pod 'Kingfisher', '~> 7.0'
   pod 'PKHUD'
+  pod 'RealmSwift'
 
   target 'RestaurantSearchTests' do
     inherit! :search_paths

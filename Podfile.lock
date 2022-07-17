@@ -8,6 +8,11 @@ PODS:
     - Moya/Core
     - RxSwift (~> 6.0)
   - PKHUD (5.3.0)
+  - Realm (10.28.1):
+    - Realm/Headers (= 10.28.1)
+  - Realm/Headers (10.28.1)
+  - RealmSwift (10.28.1):
+    - Realm (= 10.28.1)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -23,6 +28,7 @@ DEPENDENCIES:
   - Kingfisher (~> 7.0)
   - Moya/RxSwift (~> 15.0)
   - PKHUD
+  - RealmSwift
   - RxCocoa (= 6.5.0)
   - RxDataSources (~> 5.0)
   - RxSwift (= 6.5.0)
@@ -34,6 +40,8 @@ SPEC REPOS:
     - Kingfisher
     - Moya
     - PKHUD
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -45,11 +53,13 @@ SPEC CHECKSUMS:
   Kingfisher: 2457be2121734e69e54a2312ecc0150eb9ae70b3
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  Realm: f4674e0e7ee537f67a78d79bd8319bc777d61d06
+  RealmSwift: 0e0e4786685c4442bf56d3831dfefb5fa05d6fd6
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxDataSources: aa47cc1ed6c500fa0dfecac5c979b723542d79cf
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
 
-PODFILE CHECKSUM: 4cd38571afa7cf71d74aa86c65e268bce11e0027
+PODFILE CHECKSUM: 75c6b3d0d8dcb742e8b19b8526df7f628fd5a4b7
 
 COCOAPODS: 1.11.2
