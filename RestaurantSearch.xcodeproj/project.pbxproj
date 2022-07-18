@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3C51E5BE3FC492791E788BB6 /* Pods_RestaurantSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67CAC0944CBD557EC51CF250 /* Pods_RestaurantSearchTests.framework */; };
 		7B4902E3C089E28C40545FA1 /* Pods_RestaurantSearch_RestaurantSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B57B69EBF3EB75813BFCA4 /* Pods_RestaurantSearch_RestaurantSearchUITests.framework */; };
+		99085EF32883234C000C19B3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF22883234C000C19B3 /* DetailViewModel.swift */; };
+		99085EF62884934D000C19B3 /* ShopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF52884934C000C19B3 /* ShopObject.swift */; };
+		99085EF828849B86000C19B3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF728849B86000C19B3 /* RealmManager.swift */; };
 		990D488B287439A100ED407F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488A287439A100ED407F /* AppDelegate.swift */; };
 		990D488D287439A100ED407F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488C287439A100ED407F /* SceneDelegate.swift */; };
 		990D488F287439A100ED407F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488E287439A100ED407F /* ListViewController.swift */; };
@@ -35,6 +38,9 @@
 		990D48ED288016B400ED407F /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48EC288016B400ED407F /* SearchFilterViewController.swift */; };
 		990D48EF288016CE00ED407F /* SearchFilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */; };
 		990D48F12880613000ED407F /* SearchFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48F02880612F00ED407F /* SearchFilterViewModel.swift */; };
+		990D48F42882DF7500ED407F /* FavoriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */; };
+		990D48F62882DFA300ED407F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48F52882DFA300ED407F /* FavoriteViewController.swift */; };
+		990D48FB2882EA5E00ED407F /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48FA2882EA5E00ED407F /* ListViewController.storyboard */; };
 		D2CA8EC12E1D7CE2AAF90337 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728434661EC948AE2A9FBB5 /* Pods_RestaurantSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +67,9 @@
 		67CAC0944CBD557EC51CF250 /* Pods_RestaurantSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75D8BB587EFD92EBBD591340 /* Pods-RestaurantSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearchTests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearchTests/Pods-RestaurantSearchTests.release.xcconfig"; sourceTree = "<group>"; };
 		84B57B69EBF3EB75813BFCA4 /* Pods_RestaurantSearch_RestaurantSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestaurantSearch_RestaurantSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		99085EF22883234C000C19B3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		99085EF52884934C000C19B3 /* ShopObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopObject.swift; sourceTree = "<group>"; };
+		99085EF728849B86000C19B3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		990D4887287439A100ED407F /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		990D488A287439A100ED407F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		990D488C287439A100ED407F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +100,9 @@
 		990D48EC288016B400ED407F /* SearchFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
 		990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchFilterViewController.storyboard; sourceTree = "<group>"; };
 		990D48F02880612F00ED407F /* SearchFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewModel.swift; sourceTree = "<group>"; };
+		990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteViewController.storyboard; sourceTree = "<group>"; };
+		990D48F52882DFA300ED407F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		990D48FA2882EA5E00ED407F /* ListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		C141697E020931AD5233EB09 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		D6E748F60EAC5FADD9660069 /* Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch-RestaurantSearchUITests/Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF70F0FAD748941CA1718DF0 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +150,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		99085EF4288492F8000C19B3 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				99085EF52884934C000C19B3 /* ShopObject.swift */,
+				99085EF728849B86000C19B3 /* RealmManager.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		990D487E287439A000ED407F = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +184,7 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				990D48F22882DF4100ED407F /* Favorite */,
 				990D48EB2880162400ED407F /* SearchFilter */,
 				990D48E1287EA68700ED407F /* DetailRestaurant */,
 				990D48E0287EA5E000ED407F /* Search */,
@@ -199,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				990D48CA2875D7D300ED407F /* HotPepperResponse.swift */,
+				99085EF4288492F8000C19B3 /* Realm */,
 				990D48CE2876F68100ED407F /* Error */,
 				990D48C028745D4500ED407F /* API */,
 				990D48D52877548C00ED407F /* Manager */,
@@ -244,6 +267,7 @@
 		990D48E0287EA5E000ED407F /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				990D48FA2882EA5E00ED407F /* ListViewController.storyboard */,
 				990D488E287439A100ED407F /* ListViewController.swift */,
 				990D48D32876FC2C00ED407F /* ListViewModel.swift */,
 				990D48D22876FBC900ED407F /* Cell */,
@@ -257,6 +281,7 @@
 				990D48E6287ED1CD00ED407F /* Cell */,
 				990D48E2287EAA7900ED407F /* DetailViewController.swift */,
 				990D48E4287EC1C800ED407F /* DetailViewController.storyboard */,
+				99085EF22883234C000C19B3 /* DetailViewModel.swift */,
 			);
 			path = DetailRestaurant;
 			sourceTree = "<group>";
@@ -278,6 +303,15 @@
 				990D48F02880612F00ED407F /* SearchFilterViewModel.swift */,
 			);
 			path = SearchFilter;
+			sourceTree = "<group>";
+		};
+		990D48F22882DF4100ED407F /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				990D48F52882DFA300ED407F /* FavoriteViewController.swift */,
+				990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		FC9564BE071B8882F956652B /* Frameworks */ = {
@@ -405,6 +439,8 @@
 				990D4897287439A300ED407F /* LaunchScreen.storyboard in Resources */,
 				990D48E5287EC1C900ED407F /* DetailViewController.storyboard in Resources */,
 				990D4894287439A300ED407F /* Assets.xcassets in Resources */,
+				990D48FB2882EA5E00ED407F /* ListViewController.storyboard in Resources */,
+				990D48F42882DF7500ED407F /* FavoriteViewController.storyboard in Resources */,
 				990D4892287439A100ED407F /* Main.storyboard in Resources */,
 				990D48EA287ED23D00ED407F /* RestaurantInformationCell.xib in Resources */,
 			);
@@ -552,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99085EF62884934D000C19B3 /* ShopObject.swift in Sources */,
 				990D48E3287EAA7900ED407F /* DetailViewController.swift in Sources */,
 				990D48CB2875D7D300ED407F /* HotPepperResponse.swift in Sources */,
 				990D48C92875C88500ED407F /* Repository.swift in Sources */,
@@ -564,8 +601,11 @@
 				990D48CD2876F56E00ED407F /* ErrorHandler.swift in Sources */,
 				990D48E9287ED23D00ED407F /* RestaurantInformationCell.swift in Sources */,
 				990D48C72874762000ED407F /* Moya.swift in Sources */,
+				990D48F62882DFA300ED407F /* FavoriteViewController.swift in Sources */,
+				99085EF32883234C000C19B3 /* DetailViewModel.swift in Sources */,
 				990D48D02876F78C00ED407F /* Error.swift in Sources */,
 				990D488D287439A100ED407F /* SceneDelegate.swift in Sources */,
+				99085EF828849B86000C19B3 /* RealmManager.swift in Sources */,
 				990D48F12880613000ED407F /* SearchFilterViewModel.swift in Sources */,
 				990D48D42876FC2C00ED407F /* ListViewModel.swift in Sources */,
 			);

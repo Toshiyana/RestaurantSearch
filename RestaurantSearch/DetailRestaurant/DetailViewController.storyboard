@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGh-er-3AX">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="438.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="505.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMY-EY-GF8">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
@@ -29,13 +29,13 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ork-DW-DPR">
-                                                <rect key="frame" x="186.5" y="245" width="41.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="180" y="245" width="54.5" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-Hq-Git">
-                                                <rect key="frame" x="8" y="300.5" width="398" height="128"/>
+                                                <rect key="frame" x="8" y="367.5" width="398" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="sEl-kZ-ySm"/>
@@ -45,18 +45,33 @@
                                                     <outlet property="delegate" destination="Ses-XU-20l" id="Fcb-cT-AGJ"/>
                                                 </connections>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRi-vJ-Mhc">
+                                                <rect key="frame" x="60" y="302.5" width="294" height="35"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="g8m-5l-uxC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="お気に入りに追加">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="GMY-EY-GF8" secondAttribute="trailing" id="0N6-IN-frt"/>
                                             <constraint firstItem="GMY-EY-GF8" firstAttribute="top" secondItem="HGh-er-3AX" secondAttribute="top" id="5pf-Ob-Eip"/>
                                             <constraint firstAttribute="bottom" secondItem="KNp-Hq-Git" secondAttribute="bottom" constant="10" id="MQk-X1-A6k"/>
+                                            <constraint firstItem="KNp-Hq-Git" firstAttribute="top" secondItem="sRi-vJ-Mhc" secondAttribute="bottom" constant="30" id="Ve4-AU-nIN"/>
                                             <constraint firstItem="ork-DW-DPR" firstAttribute="centerX" secondItem="HGh-er-3AX" secondAttribute="centerX" id="dDS-lW-Sd5"/>
+                                            <constraint firstItem="sRi-vJ-Mhc" firstAttribute="leading" secondItem="HGh-er-3AX" secondAttribute="leading" constant="60" id="fsh-Xw-UqO"/>
                                             <constraint firstAttribute="trailing" secondItem="KNp-Hq-Git" secondAttribute="trailing" constant="8" id="gLm-Nu-bnu"/>
+                                            <constraint firstAttribute="trailing" secondItem="sRi-vJ-Mhc" secondAttribute="trailing" constant="60" id="gwt-BW-02g"/>
                                             <constraint firstItem="ork-DW-DPR" firstAttribute="top" secondItem="GMY-EY-GF8" secondAttribute="bottom" constant="25" id="ie7-bQ-lME"/>
                                             <constraint firstItem="GMY-EY-GF8" firstAttribute="leading" secondItem="HGh-er-3AX" secondAttribute="leading" id="uac-gi-q4J"/>
+                                            <constraint firstItem="sRi-vJ-Mhc" firstAttribute="top" secondItem="ork-DW-DPR" secondAttribute="bottom" constant="30" id="vLQ-l7-qsW"/>
                                             <constraint firstItem="KNp-Hq-Git" firstAttribute="leading" secondItem="HGh-er-3AX" secondAttribute="leading" constant="8" id="w3q-oG-0Ho"/>
-                                            <constraint firstItem="KNp-Hq-Git" firstAttribute="top" secondItem="ork-DW-DPR" secondAttribute="bottom" constant="35" id="xMa-G7-Qr6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -82,6 +97,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="84U-JV-U4M"/>
                     <connections>
+                        <outlet property="favoriteButton" destination="sRi-vJ-Mhc" id="g6u-X9-gLR"/>
                         <outlet property="imageView" destination="GMY-EY-GF8" id="UJm-3E-AW1"/>
                         <outlet property="nameLabel" destination="ork-DW-DPR" id="fg9-2p-eK9"/>
                         <outlet property="tableView" destination="KNp-Hq-Git" id="fjY-iL-saV"/>
@@ -96,6 +112,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

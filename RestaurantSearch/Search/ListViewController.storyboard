@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-iT-Lnj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" placeholder="店名、駅名、住所" translatesAutoresizingMaskIntoConstraints="NO" id="vBo-81-BSU">
+                                        <rect key="frame" x="0.0" y="0.0" width="318.5" height="51"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-Ae-kDS">
+                                        <rect key="frame" x="318.5" y="0.0" width="95.5" height="51"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="フィルター">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="Fg6-g0-5BZ"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dj9-C4-vce">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4IQ-hv-Wvl"/>
+                            <constraint firstItem="dj9-C4-vce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DbF-zI-85Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dj9-C4-vce" secondAttribute="trailing" id="ESj-ys-Tf2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dj9-C4-vce" secondAttribute="bottom" id="L7i-NH-McR"/>
+                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NbZ-UE-n7W"/>
+                            <constraint firstItem="dj9-C4-vce" firstAttribute="top" secondItem="gvR-iT-Lnj" secondAttribute="bottom" id="Pyz-Uc-QT8"/>
+                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rYd-Je-CA6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="MaR-xM-Jen"/>
+                    <connections>
+                        <outlet property="filteringButton" destination="JeP-Ae-kDS" id="IgP-3g-Ugy"/>
+                        <outlet property="searchBar" destination="vBo-81-BSU" id="bfA-QV-pJX"/>
+                        <outlet property="tableView" destination="dj9-C4-vce" id="7GB-Ys-dK7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2813.04347826087" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

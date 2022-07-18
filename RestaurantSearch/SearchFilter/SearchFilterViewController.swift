@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 final class SearchFilterViewController: UIViewController {
-    private lazy var viewModel = SearchFilterViewModel()
+    private let viewModel = SearchFilterViewModel()
     private let disposeBag = DisposeBag()
 
     @IBOutlet private weak var closeBarButton: UIBarButtonItem!

@@ -1,93 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v2o-Ze-rzw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cdT-6q-sHd">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--ListViewController-->
+        <scene sceneID="UH9-cG-OHx">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="RestaurantSearch" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvR-iT-Lnj">
-                                <rect key="frame" x="0.0" y="88" width="414" height="51"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" placeholder="店名、駅名、住所" translatesAutoresizingMaskIntoConstraints="NO" id="vBo-81-BSU">
-                                        <rect key="frame" x="0.0" y="0.0" width="318.5" height="51"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </searchBar>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JeP-Ae-kDS">
-                                        <rect key="frame" x="318.5" y="0.0" width="95.5" height="51"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="フィルター">
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="Fg6-g0-5BZ"/>
-                                </constraints>
-                            </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dj9-C4-vce">
-                                <rect key="frame" x="0.0" y="139" width="414" height="723"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4IQ-hv-Wvl"/>
-                            <constraint firstItem="dj9-C4-vce" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DbF-zI-85Z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dj9-C4-vce" secondAttribute="trailing" id="ESj-ys-Tf2"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dj9-C4-vce" secondAttribute="bottom" id="L7i-NH-McR"/>
-                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NbZ-UE-n7W"/>
-                            <constraint firstItem="dj9-C4-vce" firstAttribute="top" secondItem="gvR-iT-Lnj" secondAttribute="bottom" id="Pyz-Uc-QT8"/>
-                            <constraint firstItem="gvR-iT-Lnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rYd-Je-CA6"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="MaR-xM-Jen"/>
-                    <connections>
-                        <outlet property="filteringButton" destination="JeP-Ae-kDS" id="IgP-3g-Ugy"/>
-                        <outlet property="searchBar" destination="vBo-81-BSU" id="bfA-QV-pJX"/>
-                        <outlet property="tableView" destination="dj9-C4-vce" id="7GB-Ys-dK7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="ListViewController" id="VmF-g5-idY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cHn-i3-XJ8"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="go8-M7-QhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="62.946428571428569"/>
+            <point key="canvasLocation" x="4309" y="-545"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="iCl-wn-Xyh">
+        <!--FavoriteViewController-->
+        <scene sceneID="GOp-xZ-qyI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v2o-Ze-rzw" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="FavoriteViewController" id="iWC-3s-q36" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GYL-l7-occ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKQ-s4-E8E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4328" y="404"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qzK-Hf-3vi">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cdT-6q-sHd" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f8S-Tr-OAw">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dmV-4b-wpD">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="qI9-Ai-3XL" kind="relationship" relationship="viewControllers" id="jWY-fH-5Ou"/>
+                        <segue destination="CRz-gE-6sa" kind="relationship" relationship="viewControllers" id="baj-xZ-G6P"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6u-1A-skk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2313.04347826087" y="-123.21428571428571"/>
+        </scene>
+        <!--検索-->
+        <scene sceneID="Dxd-mC-oDO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qI9-Ai-3XL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="検索" image="magnifyingglass" catalog="system" id="03R-fv-WfH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sej-at-jk3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Aco-fS-j96"/>
+                        <segue destination="VmF-g5-idY" kind="relationship" relationship="rootViewController" id="LuU-5x-h9u"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OvS-bK-XQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GD1-IP-9Rq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.608695652173921" y="62.946428571428569"/>
+            <point key="canvasLocation" x="3690" y="-545"/>
+        </scene>
+        <!--お気に入り-->
+        <scene sceneID="y0x-0A-pEF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CRz-gE-6sa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="お気に入り" image="star" catalog="system" id="cCb-eI-6Me"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wNm-Pa-fpn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iWC-3s-q36" kind="relationship" relationship="rootViewController" id="d0a-tP-rPU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esj-7T-uOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="404"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
