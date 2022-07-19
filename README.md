@@ -56,14 +56,13 @@ iOS 15.5（それ以下のOSでは動作確認できていない）
 | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/DetailVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/SearchFilterVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/FavoriteVC.png" width=220 > 
 
 ### 使用しているAPI,SDK,ライブラリなど
-- ホットペッパーグルメサーチAPI
-- SwiftLint
-- RxSwift 
-- RxCocoa
-- Moya/RxSwift: API通信をカプセル化するために利用。
-- Kingfisher: Webから画像をダウンロードしてキャッシュするために利用。
-- PKHUD: 通信中のインジケータを表示するために利用。
-- RealmSwift: お気に入り登録した飲食店をローカルに保存するために利用。
+- ホットペッパーグルメサーチAPI: 飲食店を検索するため。
+- SwiftLint: コードフォーマットを整えるため。
+- RxSwift, RxCocoa: 値の変化を検知、非同期の処理の簡潔化のため。
+- Moya/RxSwift: API通信をカプセル化するため。
+- Kingfisher: Webから画像をダウンロードしてキャッシュするため。
+- PKHUD: 通信中のインジケータを表示するため。
+- RealmSwift: お気に入り登録した飲食店をローカルに保存するため。
 
 ## アドバイスして欲しいポイント
 - MVVM + RxSwiftの書き方（ObservableとSubjectの使い分け, 改善点など）
