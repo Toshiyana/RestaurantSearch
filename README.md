@@ -60,11 +60,10 @@ iOS 15.5（それ以下のOSでは動作確認できていない）
 - SwiftLint
 - RxSwift 
 - RxCocoa
-- Moya/RxSwift
-- Kingfisher
-- PKHUD
-- RealmSwift
-
+- Moya/RxSwift: API通信をカプセル化するために利用。
+- Kingfisher: Webから画像をダウンロードしてキャッシュするために利用。
+- PKHUD: 通信中のインジケータを表示するために利用。
+- RealmSwift: お気に入り登録した飲食店をローカルに保存するために利用。
 
 ## アドバイスして欲しいポイント
 - MVVM + RxSwiftの書き方（ObservableとSubjectの使い分け, 改善点など）
