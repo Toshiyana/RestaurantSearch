@@ -26,11 +26,4 @@ final class RestaurantTableViewCell: UITableViewCell {
         accessLabel.text = access
         restaurantImageView.kf.setImage(with: URL(string: logoImageUrl))
     }
-
-    //    func configure(shop: Shop) {
-    //        restaurantNameLabel.text = shop.name
-    ////        budgetLabel.text = shop.budget?.average
-    //        accessLabel.text = shop.mobileAccess
-    //        restaurantImageView.kf.setImage(with: URL(string: shop.logoImageUrl ?? ""))
-    //    }
 }
