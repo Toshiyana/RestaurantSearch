@@ -6,6 +6,7 @@
 
 ## アプリ名
 酒グルメ
+<img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/Icon.jpg" width=150 >
 
 ## コンセプト
 お酒好きのための飲食店検索アプリ。
