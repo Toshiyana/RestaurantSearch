@@ -52,7 +52,7 @@ iOS 15.5（それ以下のOSでは動作確認できていない）
 
 | 検索一覧画面 | 詳細画面 | 検索条件画面 | お気に入りリスト画面 |
 |:---:|:---:|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/DetailVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/SearchFilterVC.png" width=220 > |  | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/FavoriteVC.png" width=220 > 
+| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=170 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/DetailVC.png" width=170 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/SearchFilterVC.png" width=170 > |  | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/FavoriteVC.png" width=170 > 
 
 
 ### 使用しているAPI,SDK,ライブラリなど
