@@ -85,5 +85,12 @@ MVVM + RxSwiftの理解と実装に時間がかかってしまったため、オ
 - UnitTest
 
 ## 補足
-動作を試す場合、ホットペーパーのAPIキーを取得して、自分で設定する必要あり。
-（GitHub上の本プロジェクトにはAPIキーを含めていない。）
+動作を試す場合、ホットペーパーのAPIキーを取得して、自分で設定する必要あり。APIKey.swiftというファイルを作成して以下の内容を記述し、RestaurantSearchフォルダに置く。（RestaurantSearch/APIKey.swift）
+
+```swift
+import Foundation
+
+struct APIKey {
+    static let hotpepperApiKey ="*******"
+}
+```
