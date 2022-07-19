@@ -828,6 +828,8 @@
 				DEVELOPMENT_TEAM = 4KX39VZ9JG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "酒グルメ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ使用中、飲食店を検索するために位置情報を要求します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -857,6 +859,8 @@
 				DEVELOPMENT_TEAM = 4KX39VZ9JG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "酒グルメ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ使用中、飲食店を検索するために位置情報を要求します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
