@@ -302,10 +302,10 @@
 		990D48E1287EA68700ED407F /* DetailRestaurant */ = {
 			isa = PBXGroup;
 			children = (
-				990D48E6287ED1CD00ED407F /* Cell */,
 				990D48E2287EAA7900ED407F /* DetailViewController.swift */,
 				990D48E4287EC1C800ED407F /* DetailViewController.storyboard */,
 				99085EF22883234C000C19B3 /* DetailViewModel.swift */,
+				990D48E6287ED1CD00ED407F /* Cell */,
 			);
 			path = DetailRestaurant;
 			sourceTree = "<group>";
@@ -332,8 +332,8 @@
 		990D48F22882DF4100ED407F /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */,
 				990A4B8B28862C5C00D69F1D /* FavoriteViewController.swift */,
+				990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */,
 				990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;

@@ -19,7 +19,6 @@ final class FavoriteViewModel {
 
     // MARK: - Output
     var shops: Observable<[ShopObject]> { return _shops.asObservable() }
-    //    var shops: [ShopObject] { return _shops.value }
     private let _shops = BehaviorRelay<[ShopObject]>(value: [])
     let updateFavorite = PublishSubject<Void>()
 
