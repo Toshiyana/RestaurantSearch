@@ -19,13 +19,28 @@ final class FavoriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(RestaurantTableViewCell.nib(), forCellReuseIdentifier: RestaurantTableViewCell.identifier)
+        setupUI()
         bindViewModel()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewModel.updateFavorite.onNext(Void())
+    }
+
+    private func setupUI() {
+        // Change NavBar Color
+        guard let navBar = navigationController?.navigationBar else {
+            fatalError("NavigationController does not exist.")
+        }
+        ColorUtility.changeNabBarColor(navBar: navBar, color: .systemIndigo)
+
+        guard let tabBar = tabBarController?.tabBar else {
+            fatalError("NavigationController does not exist.")
+        }
+        TabBarUtility.set(tabBar: tabBar) // for iOS15
+
+        tableView.register(RestaurantTableViewCell.nib(), forCellReuseIdentifier: RestaurantTableViewCell.identifier)
     }
 
     private func bindViewModel() {

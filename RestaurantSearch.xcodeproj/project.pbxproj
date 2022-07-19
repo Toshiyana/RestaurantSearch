@@ -45,6 +45,8 @@
 		990D48EF288016CE00ED407F /* SearchFilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */; };
 		990D48F12880613000ED407F /* SearchFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48F02880612F00ED407F /* SearchFilterViewModel.swift */; };
 		990D48FB2882EA5E00ED407F /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48FA2882EA5E00ED407F /* ListViewController.storyboard */; };
+		99F3AF1D28865BE6009927E8 /* ColorUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F3AF1C28865BE6009927E8 /* ColorUtility.swift */; };
+		99F3AF1F28865DFF009927E8 /* TabBarUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F3AF1E28865DFF009927E8 /* TabBarUtility.swift */; };
 		D2CA8EC12E1D7CE2AAF90337 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728434661EC948AE2A9FBB5 /* Pods_RestaurantSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +113,8 @@
 		990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchFilterViewController.storyboard; sourceTree = "<group>"; };
 		990D48F02880612F00ED407F /* SearchFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewModel.swift; sourceTree = "<group>"; };
 		990D48FA2882EA5E00ED407F /* ListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		99F3AF1C28865BE6009927E8 /* ColorUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtility.swift; sourceTree = "<group>"; };
+		99F3AF1E28865DFF009927E8 /* TabBarUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarUtility.swift; sourceTree = "<group>"; };
 		C141697E020931AD5233EB09 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		D6E748F60EAC5FADD9660069 /* Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch-RestaurantSearchUITests/Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DF70F0FAD748941CA1718DF0 /* Pods-RestaurantSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.debug.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -202,6 +206,7 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				99F3AF1B28865B4D009927E8 /* Utils */,
 				990A4B9128862D0800D69F1D /* FavoriteDetail */,
 				990D48F22882DF4100ED407F /* Favorite */,
 				990D48EB2880162400ED407F /* SearchFilter */,
@@ -332,6 +337,15 @@
 				990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		99F3AF1B28865B4D009927E8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				99F3AF1C28865BE6009927E8 /* ColorUtility.swift */,
+				99F3AF1E28865DFF009927E8 /* TabBarUtility.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		FC9564BE071B8882F956652B /* Frameworks */ = {
@@ -617,6 +631,7 @@
 				990D48ED288016B400ED407F /* SearchFilterViewController.swift in Sources */,
 				990A4B9028862C5D00D69F1D /* FavoriteViewModel.swift in Sources */,
 				990D48C3287468D600ED407F /* RestaurantTableViewCell.swift in Sources */,
+				99F3AF1D28865BE6009927E8 /* ColorUtility.swift in Sources */,
 				990D488F287439A100ED407F /* ListViewController.swift in Sources */,
 				990D488B287439A100ED407F /* AppDelegate.swift in Sources */,
 				990D48BE287453A800ED407F /* APIKey.swift in Sources */,
@@ -625,6 +640,7 @@
 				990D48E9287ED23D00ED407F /* RestaurantInformationCell.swift in Sources */,
 				990D48C72874762000ED407F /* Moya.swift in Sources */,
 				99085EF32883234C000C19B3 /* DetailViewModel.swift in Sources */,
+				99F3AF1F28865DFF009927E8 /* TabBarUtility.swift in Sources */,
 				990A4B8E28862C5D00D69F1D /* FavoriteViewController.swift in Sources */,
 				990D48D02876F78C00ED407F /* Error.swift in Sources */,
 				990D488D287439A100ED407F /* SceneDelegate.swift in Sources */,
