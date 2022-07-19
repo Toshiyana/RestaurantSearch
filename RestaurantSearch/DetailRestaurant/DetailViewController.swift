@@ -59,6 +59,7 @@ final class DetailViewController: UIViewController {
     }
 
     private func setupUI() {
+        favoriteButton.layer.cornerRadius = 8
         tableView.register(RestaurantInformationCell.nib(), forCellReuseIdentifier: RestaurantInformationCell.identifier)
 
         title = shop.name
