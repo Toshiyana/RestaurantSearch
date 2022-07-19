@@ -14,7 +14,6 @@ final class SearchFilterViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     @IBOutlet private weak var closeBarButton: UIBarButtonItem!
-    @IBOutlet private weak var decideBarButton: UIBarButtonItem!
 
     @IBOutlet private weak var rangeFirstButton: UIButton! // ~300m
     @IBOutlet private weak var rangeSecondButton: UIButton! // ~500m
@@ -62,6 +61,7 @@ final class SearchFilterViewController: UIViewController {
             .subscribe { [weak self] _ in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.rangeSelected.onNext(1)
+                //                strongSelf.viewModel.rangeSelected.accept(1)
             }
             .disposed(by: disposeBag)
         // 2 - ~500m
@@ -69,6 +69,7 @@ final class SearchFilterViewController: UIViewController {
             .subscribe { [weak self] _ in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.rangeSelected.onNext(2)
+                //                strongSelf.viewModel.rangeSelected.accept(2)
             }
             .disposed(by: disposeBag)
         // 3 - ~1000m
@@ -76,6 +77,7 @@ final class SearchFilterViewController: UIViewController {
             .subscribe { [weak self] _ in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.rangeSelected.onNext(3)
+                //                strongSelf.viewModel.rangeSelected.accept(3)
             }
             .disposed(by: disposeBag)
         // 4 - ~2000m
@@ -83,6 +85,7 @@ final class SearchFilterViewController: UIViewController {
             .subscribe { [weak self] _ in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.rangeSelected.onNext(4)
+                //                strongSelf.viewModel.rangeSelected.accept(4)
             }
             .disposed(by: disposeBag)
         // 5 - ~3000m
@@ -90,6 +93,7 @@ final class SearchFilterViewController: UIViewController {
             .subscribe { [weak self] _ in
                 guard let strongSelf = self else { return }
                 strongSelf.viewModel.rangeSelected.onNext(5)
+                //                strongSelf.viewModel.rangeSelected.accept(5)
             }
             .disposed(by: disposeBag)
 

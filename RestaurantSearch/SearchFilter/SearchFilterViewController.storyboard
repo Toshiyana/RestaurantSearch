@@ -20,9 +20,6 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="stop" id="mTs-vv-koi"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="upW-fT-raX"/>
-                                    <barButtonItem title="リセット" id="UFU-av-Ik3"/>
-                                    <barButtonItem title="決定" id="SYh-FD-utB"/>
                                 </items>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" systemColor="systemIndigoColor"/>
@@ -305,7 +302,6 @@
                     <connections>
                         <outlet property="closeBarButton" destination="mTs-vv-koi" id="czX-mf-6m4"/>
                         <outlet property="cocktailButton" destination="w5i-DF-PuR" id="uim-mc-yUF"/>
-                        <outlet property="decideBarButton" destination="SYh-FD-utB" id="Uxr-Wo-JaE"/>
                         <outlet property="freeDrinkButton" destination="ngC-kv-tGz" id="HuO-dU-Fcc"/>
                         <outlet property="japaneseSakeButton" destination="ap9-uK-cSE" id="Bgk-Ho-p8l"/>
                         <outlet property="rangeFifthButton" destination="dtS-v8-BIn" id="heH-6n-a31"/>
