@@ -5,7 +5,7 @@
 柳元俊輝
 
 ## アプリ名
-酒グルメ
+<p> 酒グルメ </p>
 <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/Icon.jpg" width=150 >
 
 ## コンセプト
