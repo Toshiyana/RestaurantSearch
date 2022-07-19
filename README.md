@@ -50,13 +50,9 @@ iOS 15.5（それ以下のOSでは動作確認できていない）
 - 検索条件画面：検索条件を指定する画面。
 - お気に入りリスト画面：お気に入りに登録した飲食店の一覧を表示する。
 
-| 検索一覧画面 | 詳細画面 |
-|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/DetailVC.png" width=220 > 
-
-| 検索条件画面 | お気に入りリスト画面 |
-|:---:|:---:|
-| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/SearchFilterVC.png" width=220 > |  | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/FavoriteVC.png" width=220 > 
+| 検索一覧画面 | 詳細画面 | 検索条件画面 | お気に入りリスト画面 |
+|:---:|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/DetailVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/SearchFilterVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/FavoriteVC.png" width=220 > 
 
 ### 使用しているAPI,SDK,ライブラリなど
 - ホットペッパーグルメサーチAPI
