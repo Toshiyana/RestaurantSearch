@@ -64,7 +64,7 @@ final class FavoriteDetailViewController: UIViewController {
         tableView.register(RestaurantInformationCell.nib(), forCellReuseIdentifier: RestaurantInformationCell.identifier)
 
         title = shopObject.name
-        imageView.kf.setImage(with: URL(string: shopObject.logoImageUrl))
+        imageView.kf.setImage(with: URL(string: shopObject.photo))
         nameLabel.text = shopObject.name
     }
 
