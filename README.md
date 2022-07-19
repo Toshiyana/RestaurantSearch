@@ -45,9 +45,15 @@ iOS 15.5（それ以下のOSでは動作確認できていない）
 - お気に入り登録：お気に入りの飲食店を詳細画面から登録できる。
 
 ### 画面一覧
-- 検索画面 ：条件を指定してレストランを検索する。
-- 一覧画面 ：検索結果の飲食店を一覧表示する。
+- 検索一覧画面：条件を指定してレストランを検索し、検索結果を一覧表示する。
+- 詳細画面：検索した飲食店の詳細情報を表示する画面.
+- 検索条件画面：検索条件を指定する画面。
 - お気に入りリスト画面：お気に入りに登録した飲食店の一覧を表示する。
+
+| 検索一覧画面 | 詳細画面 | 検索条件画面 | お気に入りリスト画面 |
+|:---:|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/wiki/Toshiyana/RestaurantSearch/images/ListVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/messageTodo/images/DetailVC.png" width=220 > | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/messageTodo/images/SearchFilterVC.png" width=220 > |  | <img src="https://raw.githubusercontent.com/wiki/Toshiyana/messageTodo/images/FavoriteVC.png" width=220 > 
+
 
 ### 使用しているAPI,SDK,ライブラリなど
 - ホットペッパーグルメサーチAPI
