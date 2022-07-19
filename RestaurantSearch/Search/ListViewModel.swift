@@ -66,9 +66,9 @@ final class ListViewModel {
                     .materialize()
             }
             .subscribe { [weak self] event in
-                guard let strongSelf = self else { return }
+                guard let strongSelf = self, let event = event.element else { return }
                 // print("DEBUG: event:: \(event)")
-                switch event.element! {
+                switch event {
                 case .next(let response):
                     print("DEBUG: search response count:: \(response.results.shop.count)")
                     // print("DEBUG: response:: \(response.results.shop)")
