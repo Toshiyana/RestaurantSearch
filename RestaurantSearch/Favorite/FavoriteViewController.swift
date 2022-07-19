@@ -33,7 +33,7 @@ final class FavoriteViewController: UIViewController {
         guard let navBar = navigationController?.navigationBar else {
             fatalError("NavigationController does not exist.")
         }
-        ColorUtility.changeNabBarColor(navBar: navBar, color: .systemIndigo)
+        ColorUtility.changeNabBarColor(navBar: navBar, color: UIColor(named: "ThemeColor") ?? .systemIndigo)
 
         guard let tabBar = tabBarController?.tabBar else {
             fatalError("NavigationController does not exist.")

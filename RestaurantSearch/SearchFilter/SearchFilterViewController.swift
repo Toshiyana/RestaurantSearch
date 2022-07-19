@@ -190,7 +190,7 @@ final class SearchFilterViewController: UIViewController {
 
     private func activeRange(button: UIButton, active: Bool) {
         if active {
-            button.backgroundColor = .systemIndigo
+            button.backgroundColor = UIColor(named: "ThemeColor") ?? .systemIndigo
             button.setTitleColor(.white, for: .normal)
         } else {
             button.backgroundColor = .systemGray5
