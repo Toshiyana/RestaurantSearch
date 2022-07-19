@@ -12,6 +12,12 @@
 		99085EF32883234C000C19B3 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF22883234C000C19B3 /* DetailViewModel.swift */; };
 		99085EF62884934D000C19B3 /* ShopObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF52884934C000C19B3 /* ShopObject.swift */; };
 		99085EF828849B86000C19B3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99085EF728849B86000C19B3 /* RealmManager.swift */; };
+		990A4B8E28862C5D00D69F1D /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A4B8B28862C5C00D69F1D /* FavoriteViewController.swift */; };
+		990A4B8F28862C5D00D69F1D /* FavoriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */; };
+		990A4B9028862C5D00D69F1D /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */; };
+		990A4B9528862D3400D69F1D /* FavoriteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A4B9228862D3400D69F1D /* FavoriteDetailViewController.swift */; };
+		990A4B9628862D3400D69F1D /* FavoriteDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990A4B9328862D3400D69F1D /* FavoriteDetailViewController.storyboard */; };
+		990A4B9728862D3400D69F1D /* FavoriteDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990A4B9428862D3400D69F1D /* FavoriteDetailViewModel.swift */; };
 		990D488B287439A100ED407F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488A287439A100ED407F /* AppDelegate.swift */; };
 		990D488D287439A100ED407F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488C287439A100ED407F /* SceneDelegate.swift */; };
 		990D488F287439A100ED407F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D488E287439A100ED407F /* ListViewController.swift */; };
@@ -38,8 +44,6 @@
 		990D48ED288016B400ED407F /* SearchFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48EC288016B400ED407F /* SearchFilterViewController.swift */; };
 		990D48EF288016CE00ED407F /* SearchFilterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */; };
 		990D48F12880613000ED407F /* SearchFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48F02880612F00ED407F /* SearchFilterViewModel.swift */; };
-		990D48F42882DF7500ED407F /* FavoriteViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */; };
-		990D48F62882DFA300ED407F /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990D48F52882DFA300ED407F /* FavoriteViewController.swift */; };
 		990D48FB2882EA5E00ED407F /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 990D48FA2882EA5E00ED407F /* ListViewController.storyboard */; };
 		D2CA8EC12E1D7CE2AAF90337 /* Pods_RestaurantSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2728434661EC948AE2A9FBB5 /* Pods_RestaurantSearch.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +74,12 @@
 		99085EF22883234C000C19B3 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		99085EF52884934C000C19B3 /* ShopObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopObject.swift; sourceTree = "<group>"; };
 		99085EF728849B86000C19B3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		990A4B8B28862C5C00D69F1D /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteViewController.storyboard; sourceTree = "<group>"; };
+		990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		990A4B9228862D3400D69F1D /* FavoriteDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewController.swift; sourceTree = "<group>"; };
+		990A4B9328862D3400D69F1D /* FavoriteDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FavoriteDetailViewController.storyboard; sourceTree = "<group>"; };
+		990A4B9428862D3400D69F1D /* FavoriteDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDetailViewModel.swift; sourceTree = "<group>"; };
 		990D4887287439A100ED407F /* RestaurantSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		990D488A287439A100ED407F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		990D488C287439A100ED407F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +110,6 @@
 		990D48EC288016B400ED407F /* SearchFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewController.swift; sourceTree = "<group>"; };
 		990D48EE288016CE00ED407F /* SearchFilterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchFilterViewController.storyboard; sourceTree = "<group>"; };
 		990D48F02880612F00ED407F /* SearchFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterViewModel.swift; sourceTree = "<group>"; };
-		990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FavoriteViewController.storyboard; sourceTree = "<group>"; };
-		990D48F52882DFA300ED407F /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		990D48FA2882EA5E00ED407F /* ListViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
 		C141697E020931AD5233EB09 /* Pods-RestaurantSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch/Pods-RestaurantSearch.release.xcconfig"; sourceTree = "<group>"; };
 		D6E748F60EAC5FADD9660069 /* Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-RestaurantSearch-RestaurantSearchUITests/Pods-RestaurantSearch-RestaurantSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +167,16 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		990A4B9128862D0800D69F1D /* FavoriteDetail */ = {
+			isa = PBXGroup;
+			children = (
+				990A4B9328862D3400D69F1D /* FavoriteDetailViewController.storyboard */,
+				990A4B9228862D3400D69F1D /* FavoriteDetailViewController.swift */,
+				990A4B9428862D3400D69F1D /* FavoriteDetailViewModel.swift */,
+			);
+			path = FavoriteDetail;
+			sourceTree = "<group>";
+		};
 		990D487E287439A000ED407F = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +202,7 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
+				990A4B9128862D0800D69F1D /* FavoriteDetail */,
 				990D48F22882DF4100ED407F /* Favorite */,
 				990D48EB2880162400ED407F /* SearchFilter */,
 				990D48E1287EA68700ED407F /* DetailRestaurant */,
@@ -308,8 +327,9 @@
 		990D48F22882DF4100ED407F /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				990D48F52882DFA300ED407F /* FavoriteViewController.swift */,
-				990D48F32882DF7500ED407F /* FavoriteViewController.storyboard */,
+				990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */,
+				990A4B8B28862C5C00D69F1D /* FavoriteViewController.swift */,
+				990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -435,12 +455,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				990D48C4287468D600ED407F /* RestaurantTableViewCell.xib in Resources */,
+				990A4B8F28862C5D00D69F1D /* FavoriteViewController.storyboard in Resources */,
 				990D48EF288016CE00ED407F /* SearchFilterViewController.storyboard in Resources */,
 				990D4897287439A300ED407F /* LaunchScreen.storyboard in Resources */,
 				990D48E5287EC1C900ED407F /* DetailViewController.storyboard in Resources */,
 				990D4894287439A300ED407F /* Assets.xcassets in Resources */,
+				990A4B9628862D3400D69F1D /* FavoriteDetailViewController.storyboard in Resources */,
 				990D48FB2882EA5E00ED407F /* ListViewController.storyboard in Resources */,
-				990D48F42882DF7500ED407F /* FavoriteViewController.storyboard in Resources */,
 				990D4892287439A100ED407F /* Main.storyboard in Resources */,
 				990D48EA287ED23D00ED407F /* RestaurantInformationCell.xib in Resources */,
 			);
@@ -594,18 +615,21 @@
 				990D48C92875C88500ED407F /* Repository.swift in Sources */,
 				990D48D7287754A900ED407F /* QueryShareManager.swift in Sources */,
 				990D48ED288016B400ED407F /* SearchFilterViewController.swift in Sources */,
+				990A4B9028862C5D00D69F1D /* FavoriteViewModel.swift in Sources */,
 				990D48C3287468D600ED407F /* RestaurantTableViewCell.swift in Sources */,
 				990D488F287439A100ED407F /* ListViewController.swift in Sources */,
 				990D488B287439A100ED407F /* AppDelegate.swift in Sources */,
 				990D48BE287453A800ED407F /* APIKey.swift in Sources */,
+				990A4B9728862D3400D69F1D /* FavoriteDetailViewModel.swift in Sources */,
 				990D48CD2876F56E00ED407F /* ErrorHandler.swift in Sources */,
 				990D48E9287ED23D00ED407F /* RestaurantInformationCell.swift in Sources */,
 				990D48C72874762000ED407F /* Moya.swift in Sources */,
-				990D48F62882DFA300ED407F /* FavoriteViewController.swift in Sources */,
 				99085EF32883234C000C19B3 /* DetailViewModel.swift in Sources */,
+				990A4B8E28862C5D00D69F1D /* FavoriteViewController.swift in Sources */,
 				990D48D02876F78C00ED407F /* Error.swift in Sources */,
 				990D488D287439A100ED407F /* SceneDelegate.swift in Sources */,
 				99085EF828849B86000C19B3 /* RealmManager.swift in Sources */,
+				990A4B9528862D3400D69F1D /* FavoriteDetailViewController.swift in Sources */,
 				990D48F12880613000ED407F /* SearchFilterViewModel.swift in Sources */,
 				990D48D42876FC2C00ED407F /* ListViewModel.swift in Sources */,
 			);

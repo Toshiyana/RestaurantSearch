@@ -31,7 +31,7 @@ struct Shop: Codable, Identifiable {
     // HotpepperのAPIの検索クエリで"type=lite"とした時に、出力されないものをOptionalにした
     let id: String
     let name: String // 必須
-    let logoImageUrl: URL? // "URL?"にすべき？、必須
+    let logoImageUrl: String?
     //    let nameKana: String?
     let address: String
     let stationName: String?

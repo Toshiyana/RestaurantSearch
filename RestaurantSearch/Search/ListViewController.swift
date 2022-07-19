@@ -55,15 +55,6 @@ final class ListViewController: UIViewController {
         guard CLLocationManager.locationServicesEnabled() else { return }
         locationManager.delegate = self
         locationManager.requestLocation()
-
-        //        guard let location = locationManager.location?.coordinate else { return }
-        //        QueryShareManager.shared.addQuery(key: "lat", value: "\(location.latitude)")
-        //        QueryShareManager.shared.addQuery(key: "lng", value: "\(location.longitude)")
-        //        print("DEBUG: lat: \(location.latitude), lng: \(location.longitude)")
-
-        //            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //            locationManager.startUpdatingLocation()
-
     }
 
     private func bindViewModel() {
@@ -87,7 +78,8 @@ final class ListViewController: UIViewController {
         viewModel.shops
             .bind(to: tableView.rx.items) { tableView, _, shop in
                 let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantTableViewCell.identifier) as! RestaurantTableViewCell
-                cell.configure(shop: shop)
+                //                cell.configure(shop: shop)
+                cell.configure(name: shop.name, access: shop.mobileAccess!, logoImageUrl: shop.logoImageUrl!)
                 return cell
             }
             .disposed(by: disposeBag)
