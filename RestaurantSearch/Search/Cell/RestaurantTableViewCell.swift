@@ -15,14 +15,12 @@ final class RestaurantTableViewCell: UITableViewCell {
     }
 
     @IBOutlet private weak var restaurantNameLabel: UILabel!
-    @IBOutlet private weak var budgetLabel: UILabel!
     @IBOutlet private weak var accessLabel: UILabel!
     @IBOutlet private weak var restaurantImageView: UIImageView!
     @IBOutlet private weak var favoriteImageView: UIImageView!
 
     func configure(name: String, access: String, logoImageUrl: String) {
         restaurantNameLabel.text = name
-        //        budgetLabel.text = shop.budget?.average
         accessLabel.text = access
         restaurantImageView.kf.setImage(with: URL(string: logoImageUrl))
     }
