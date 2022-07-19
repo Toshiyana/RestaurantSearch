@@ -21,6 +21,7 @@ disabled_rules:
 - function_parameter_count # 引数を6個以上用いたいため
 - identifier_name
 - block_based_kvo # observerValue()をoverrideしたいため
+- cyclomatic_complexity # 1つのメソッド内で条件式を11個以上使うのを許可するため
 
 # opt-inルールの中で無効にするルール
 - array_init # sequenceからArrayへの変換をする際に、seq.map { $0 }と記述した炒め

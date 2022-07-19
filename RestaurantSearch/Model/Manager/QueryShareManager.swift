@@ -33,14 +33,4 @@ final class QueryShareManager {
             QueryShareManager.shared.addQuery(key: key, value: "\(filterValue)")
         }
     }
-
-    //    func resetQuery() {
-    //        QueryShareManager.shared.queries = [:]
-    //
-    //        if let location = CLLocationManager().location?.coordinate {
-    //            QueryShareManager.shared.addQuery(key: "lat", value: "\(location.latitude)")
-    //            QueryShareManager.shared.addQuery(key: "lng", value: "\(location.longitude)")
-    //        }
-    //        print("DEBUG: query by resetQuery(), \(queries)")
-    //    }
 }

@@ -174,8 +174,8 @@
 		990A4B9128862D0800D69F1D /* FavoriteDetail */ = {
 			isa = PBXGroup;
 			children = (
-				990A4B9328862D3400D69F1D /* FavoriteDetailViewController.storyboard */,
 				990A4B9228862D3400D69F1D /* FavoriteDetailViewController.swift */,
+				990A4B9328862D3400D69F1D /* FavoriteDetailViewController.storyboard */,
 				990A4B9428862D3400D69F1D /* FavoriteDetailViewModel.swift */,
 			);
 			path = FavoriteDetail;
@@ -206,13 +206,13 @@
 		990D4889287439A100ED407F /* RestaurantSearch */ = {
 			isa = PBXGroup;
 			children = (
-				99F3AF1B28865B4D009927E8 /* Utils */,
-				990A4B9128862D0800D69F1D /* FavoriteDetail */,
 				990D48F22882DF4100ED407F /* Favorite */,
+				990A4B9128862D0800D69F1D /* FavoriteDetail */,
 				990D48EB2880162400ED407F /* SearchFilter */,
 				990D48E1287EA68700ED407F /* DetailRestaurant */,
 				990D48E0287EA5E000ED407F /* Search */,
 				990D48BF28745D2900ED407F /* Model */,
+				99F3AF1B28865B4D009927E8 /* Utils */,
 				990D48BD287453A800ED407F /* APIKey.swift */,
 				990D488A287439A100ED407F /* AppDelegate.swift */,
 				990D488C287439A100ED407F /* SceneDelegate.swift */,
@@ -302,10 +302,10 @@
 		990D48E1287EA68700ED407F /* DetailRestaurant */ = {
 			isa = PBXGroup;
 			children = (
-				990D48E6287ED1CD00ED407F /* Cell */,
 				990D48E2287EAA7900ED407F /* DetailViewController.swift */,
 				990D48E4287EC1C800ED407F /* DetailViewController.storyboard */,
 				99085EF22883234C000C19B3 /* DetailViewModel.swift */,
+				990D48E6287ED1CD00ED407F /* Cell */,
 			);
 			path = DetailRestaurant;
 			sourceTree = "<group>";
@@ -332,8 +332,8 @@
 		990D48F22882DF4100ED407F /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */,
 				990A4B8B28862C5C00D69F1D /* FavoriteViewController.swift */,
+				990A4B8C28862C5C00D69F1D /* FavoriteViewController.storyboard */,
 				990A4B8D28862C5D00D69F1D /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
@@ -828,6 +828,8 @@
 				DEVELOPMENT_TEAM = 4KX39VZ9JG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "酒グルメ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ使用中、飲食店を検索するために位置情報を要求します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -857,6 +859,8 @@
 				DEVELOPMENT_TEAM = 4KX39VZ9JG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RestaurantSearch/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "酒グルメ";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ使用中、飲食店を検索するために位置情報を要求します。";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

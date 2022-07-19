@@ -39,19 +39,19 @@ final class SearchFilterViewModel {
                 if let range = queries["range"] {
                     strongSelf.activeRange.onNext(Int(range as! String)!)
                 }
-                if let _ = queries["sake"] {
+                if queries["sake"] != nil {
                     strongSelf.activeJapaneseSake.onNext(true)
                 }
-                if let _ = queries["cocktail"] {
+                if queries["cocktail"] != nil {
                     strongSelf.activeCocktail.onNext(true)
                 }
-                if let _ = queries["shochu"] {
+                if queries["shochu"] != nil {
                     strongSelf.activeShochu.onNext(true)
                 }
-                if let _ = queries["wine"] {
+                if queries["wine"] != nil {
                     strongSelf.activeWine.onNext(true)
                 }
-                if let _ = queries["free_drink"] {
+                if queries["free_drink"] != nil {
                     strongSelf.activeFreeDrink.onNext(true)
                 }
             }

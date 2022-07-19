@@ -49,7 +49,7 @@ final class ListViewController: UIViewController {
         guard let navBar = navigationController?.navigationBar else {
             fatalError("NavigationController does not exist.")
         }
-        ColorUtility.changeNabBarColor(navBar: navBar, color: .systemIndigo)
+        ColorUtility.changeNabBarColor(navBar: navBar, color: UIColor(named: "ThemeColor") ?? .systemIndigo)
 
         guard let tabBar = tabBarController?.tabBar else {
             fatalError("NavigationController does not exist.")
@@ -171,7 +171,6 @@ extension ListViewController: CLLocationManagerDelegate {
     // 位置情報が変化した時に呼び出すメソッド
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue = locations.last else { return }
-        //        locationManager.stopUpdatingLocation()
 
         // 位置情報が変わるたびにQueryのlat, lngを更新する
         let lat = locValue.coordinate.latitude
@@ -184,7 +183,7 @@ extension ListViewController: CLLocationManagerDelegate {
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // TODO: エラーメッセージ画面に表示
+        // TODO: アラートを表示
         print(error)
     }
 }

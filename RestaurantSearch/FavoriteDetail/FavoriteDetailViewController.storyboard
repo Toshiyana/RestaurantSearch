@@ -20,22 +20,22 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClN-YQ-6AO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="505.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="512"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hv-nS-jfM">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                                <rect key="frame" x="0.0" y="10" width="414" height="220"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="220" id="Wkv-3C-bqa"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fh-D5-Yhk">
-                                                <rect key="frame" x="180" y="245" width="54.5" height="27.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <rect key="frame" x="183" y="255" width="48" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DUH-u2-fJo">
-                                                <rect key="frame" x="8" y="367.5" width="398" height="128"/>
+                                                <rect key="frame" x="8" y="374" width="398" height="128"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="128" id="ozw-d3-Eag"/>
@@ -46,7 +46,7 @@
                                                 </connections>
                                             </tableView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvJ-1i-iwV">
-                                                <rect key="frame" x="60" y="302.5" width="294" height="35"/>
+                                                <rect key="frame" x="60" y="309" width="294" height="35"/>
                                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="RdU-HM-B5W"/>
@@ -69,7 +69,7 @@
                                             <constraint firstItem="8fh-D5-Yhk" firstAttribute="centerX" secondItem="ClN-YQ-6AO" secondAttribute="centerX" id="Mxb-U4-GT8"/>
                                             <constraint firstItem="8fh-D5-Yhk" firstAttribute="top" secondItem="7hv-nS-jfM" secondAttribute="bottom" constant="25" id="Pqk-Zd-oiN"/>
                                             <constraint firstAttribute="bottom" secondItem="DUH-u2-fJo" secondAttribute="bottom" constant="10" id="RZf-yB-jQ8"/>
-                                            <constraint firstItem="7hv-nS-jfM" firstAttribute="top" secondItem="ClN-YQ-6AO" secondAttribute="top" id="WY3-MB-JqJ"/>
+                                            <constraint firstItem="7hv-nS-jfM" firstAttribute="top" secondItem="ClN-YQ-6AO" secondAttribute="top" constant="10" id="WY3-MB-JqJ"/>
                                             <constraint firstAttribute="trailing" secondItem="7hv-nS-jfM" secondAttribute="trailing" id="f8P-2d-6BV"/>
                                             <constraint firstItem="DUH-u2-fJo" firstAttribute="top" secondItem="qvJ-1i-iwV" secondAttribute="bottom" constant="30" id="w7B-uD-Xs7"/>
                                         </constraints>
